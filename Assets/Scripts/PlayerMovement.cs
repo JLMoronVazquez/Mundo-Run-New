@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float normalSpeed = 5f;
+    public float slowSpeed = 2f;
     public float jumpForce = 5f;
     public bool isJumping = false;
 
@@ -13,52 +14,41 @@ public class PlayerMovement : MonoBehaviour
     public float MinXPos = -3;
 
     public BoxCollider headCollider;
+    public RotateWorld worldRotation;
 
     private bool isRolling = false;
+    public float speed;
     private Rigidbody rb;
     //private Animator animator;
 
 
 
-    private void Awake()
+    public void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        speed = normalSpeed;
         //animator = GetComponent<Animator>();
         //animator.SetBool("SeAgacha", false);
-        
     }
 
-    private void Update()
+    public void Update()
     {
         Move();
-
-
-        if (transform.position.x > MaxXPos)
-        {
-            transform.position = new Vector3(MaxXPos, transform.position.y, transform.position.z);
-        }
-        else if (transform.position.x < MinXPos)
-        {
-            transform.position = new Vector3(MinXPos, transform.position.y, transform.position.z);
-        }
-
-
         //animator.SetBool("Teclas", true);
-
         Jump();
         Roll();
     }
 
-    IEnumerator SeAgachaColision()
+    public IEnumerator SeAgachaColision()
     {
         yield return new WaitForSeconds(1f);
         //animator.SetBool("SeAgacha", false);
         //animator.SetBool("Parado", false);
-        speed = 5f;
+        speed = normalSpeed;
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Tierra"))
         {
@@ -71,11 +61,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.collider.CompareTag("Untagged"))
         {
+            worldRotation.speedRot = worldRotation.stopSpeed;
             if (Input.GetKey(KeyCode.A))
             {
                 GoLeft();
                 return;
-
             }
 
             if (Input.GetKey(KeyCode.D))
@@ -85,7 +75,6 @@ public class PlayerMovement : MonoBehaviour
             }
 
             Stand();
-
         }
 
 
@@ -112,11 +101,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.collider.CompareTag("Untagged"))
         {
+            worldRotation.speedRot = worldRotation.normalSpeed;
             //animator.SetBool("Parado", false);
             //animator.SetBool("Teclas", false);
             //animator.SetBool("AndarLado", false);
 
-            speed = 5f;
+            speed = normalSpeed;
         }
     }
 
@@ -125,12 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.GetComponent<Collider>().CompareTag("Tropiezo"))
         {
+            worldRotation.speedRot = worldRotation.tripSpeed;
             //animator.SetBool("Tropieza", true);
         }
 
         if (other.GetComponent<Collider>().CompareTag("Frenar"))
         {
-
+            worldRotation.speedRot = worldRotation.tripSpeed;
         }
 
     }
@@ -138,20 +129,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.GetComponent<Collider>().CompareTag("Tropiezo"))
         {
-            StartCoroutine("TiempoTropiezo");
+            worldRotation.speedRot = worldRotation.normalSpeed;
             //animator.SetBool("Tropieza", false);
-            rb.mass = 10;
-
         }
+
         if (other.GetComponent<Collider>().CompareTag("Frenar"))
         {
+            worldRotation.speedRot = worldRotation.normalSpeed;
         }
-    }
-    IEnumerator TiempoTropiezo()
-    {
-        yield return new WaitForSeconds(1f);
-        rb.mass = 1;
-
     }
 
     public void GoLeft()
@@ -159,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
         //animator.Play("AndarIzquierda");
         //animator.SetBool("AndarLado", true);
         //animator.SetBool("Teclas", false);
-        speed = 2f;
+        speed = slowSpeed;
         return;
     }
 
@@ -168,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         //animator.Play("AndarDerecha");
         //animator.SetBool("AndarLado", true);
         //animator.SetBool("Teclas", false);
-        speed = 2f;
+        speed = slowSpeed;
         return;
     }
 
@@ -180,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //animator.Play("Agacharse");
                 //animator.SetBool("SeAgacha", true);
+                worldRotation.speedRot = 15;
                 headCollider.enabled = true;
                 StartCoroutine("SeAgachaColision");
                 isRolling = true;
@@ -209,19 +195,22 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
 
-        if (movementDirection.x > MaxXPos)
+        rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, 0);
+
+        if (transform.position.x > MaxXPos)
         {
-            movementDirection.x = MaxXPos;
+            Vector3 posPlayer = transform.position;
+            posPlayer.x = MaxXPos;
+            transform.position = posPlayer;
         }
 
-        if (movementDirection.x < MinXPos)
+        if (transform.position.x < MinXPos)
         {
-            movementDirection.x = MinXPos;
+            Vector3 posPlayer = transform.position;
+            posPlayer.x = MinXPos;
+            transform.position = posPlayer;
         }
-
-        rb.MovePosition(transform.position + movementDirection * speed * Time.deltaTime);
     }
 
     public void Stand()
