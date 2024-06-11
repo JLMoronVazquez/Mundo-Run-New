@@ -128,13 +128,6 @@ public class PlayerMovement : MonoBehaviour
             //animator.SetBool("Tropieza", true);
         }
 
-        if (other.CompareTag("MuroInvisible"))
-        {
-            Vector3 forwardDirection = transform.forward;
-            Vector3 targetPosition = transform.position + forwardDirection;
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, MovMuroInvisible * Time.deltaTime);
-        }
-
         if (other.GetComponent<Collider>().CompareTag("Frenar"))
         {
 
