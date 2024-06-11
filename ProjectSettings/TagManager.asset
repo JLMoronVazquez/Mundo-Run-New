@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tierra
+  - Tropiezo
+  - Agachate
+  - Frenar
+  - Cochera
   layers:
   - Default
   - TransparentFX
