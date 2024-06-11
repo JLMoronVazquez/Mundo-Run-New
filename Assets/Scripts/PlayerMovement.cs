@@ -73,8 +73,6 @@ public class PlayerMovement : MonoBehaviour
                 GoRight();
                 return;
             }
-
-            Stand();
         }
 
 
@@ -98,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionExit(Collision collision)
     {
-
+        worldRotation.speedRot = worldRotation.normalSpeed;
         if (collision.collider.CompareTag("Untagged"))
         {
             worldRotation.speedRot = worldRotation.normalSpeed;
@@ -165,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //animator.Play("Agacharse");
                 //animator.SetBool("SeAgacha", true);
-                worldRotation.speedRot = 15;
+                worldRotation.speedRot = worldRotation.rollSpeed;
                 headCollider.enabled = true;
                 StartCoroutine("SeAgachaColision");
                 isRolling = true;
@@ -185,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //animator.SetBool("Teclas", false);
                 //animator.Play("Jump");
-                rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
                 isJumping = true;
             }
         }
@@ -197,6 +195,8 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, 0);
+        //Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
+        //transform.position = transform.position + movementDirection * speed * Time.deltaTime;
 
         if (transform.position.x > MaxXPos)
         {
@@ -211,10 +211,5 @@ public class PlayerMovement : MonoBehaviour
             posPlayer.x = MinXPos;
             transform.position = posPlayer;
         }
-    }
-
-    public void Stand()
-    {
-
     }
 }
