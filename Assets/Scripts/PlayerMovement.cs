@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float normalSpeed = 5f;
     public float slowSpeed = 2f;
     public float jumpForce = 5f;
-    public bool isJumping = false;
+
 
     public float MaxXPos = 3;
     public float MinXPos = -3;
@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider headCollider;
     public RotateWorld worldRotation;
 
+    private bool isJumping = false;
     private bool isRolling = false;
+    private bool isStopped = false;
     public float speed;
     private Rigidbody rb;
     //private Animator animator;
@@ -58,9 +60,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionStay(Collision collision)
     {
-
         if (collision.collider.CompareTag("Untagged"))
         {
+            isStopped = true;
             worldRotation.speedRot = worldRotation.stopSpeed;
             if (Input.GetKey(KeyCode.A))
             {
@@ -96,9 +98,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionExit(Collision collision)
     {
+        isStopped = false;
         worldRotation.speedRot = worldRotation.normalSpeed;
         if (collision.collider.CompareTag("Untagged"))
         {
+            
             worldRotation.speedRot = worldRotation.normalSpeed;
             //animator.SetBool("Parado", false);
             //animator.SetBool("Teclas", false);
@@ -159,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (!isRolling && !isJumping)
+            if (!isRolling && !isJumping && !isStopped)
             {
                 //animator.Play("Agacharse");
                 //animator.SetBool("SeAgacha", true);
