@@ -21,7 +21,7 @@ public class RotateWorld : MonoBehaviour
     {
         //transform.Rotate(new Vector3(-speedRot, 0f, 0f) * Time.deltaTime);
 
-        Quaternion deltaRotation = Quaternion.Euler(new Vector3(0f, 0f, -speedRot) * Time.deltaTime);
+        Quaternion deltaRotation = Quaternion.Euler(new Vector3(-speedRot, 0f, 0f) * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
 }

@@ -390,6 +390,11 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3966503526599164431, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
+        type: 3}
+      propertyPath: normalSpeed
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 5921698304473908030, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
         type: 3}
       propertyPath: m_Name
