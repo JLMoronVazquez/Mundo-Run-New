@@ -198,9 +198,11 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, 0);
-        //Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
-        //transform.position = transform.position + movementDirection * speed * Time.deltaTime;
+        //rb.velocity = new Vector3(horizontalInput * speed, rb.velocity.y, 0);
+
+        rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0, 0);
+        transform.position = transform.position + movementDirection * speed * Time.deltaTime;
 
         if (transform.position.x > MaxXPos)
         {

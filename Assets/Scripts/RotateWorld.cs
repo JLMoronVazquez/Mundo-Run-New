@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class RotateWorld : MonoBehaviour
 {
-    public float speedRot, normalSpeed, rollSpeed, tripSpeed, carSpeed, boatSpeed, stopSpeed;
+    public float normalSpeed, rollSpeed, tripSpeed, carSpeed, boatSpeed, stopSpeed;
 
+    [HideInInspector] public float speedRot;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        speedRot = normalSpeed;
     }
 
     // Update is called once per frame
