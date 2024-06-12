@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1280825768269608068}
   m_Layer: 0
   m_Name: CamaraOnBoard
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 1280825768286662295}
   m_Layer: 0
   m_Name: ActivarTunel
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 1280825768288733604}
   m_Layer: 0
   m_Name: BorraTrafi5apareceTrafi7
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 1280825768325303303}
   m_Layer: 0
   m_Name: Borratrafi4ApareTrafi6
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1280825768352333479}
   m_Layer: 0
   m_Name: BorrarTrafi9BorrarTunel2
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 1280825768359473561}
   m_Layer: 0
   m_Name: Borra Trafic7 ApareceTrafi9
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 1280825768390383924}
   m_Layer: 0
   m_Name: BorrarExca3AparecTunel
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 1280825768556660709}
   m_Layer: 0
   m_Name: BorraTrafi6ApareceTunel
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 1280825768678341743}
   m_Layer: 0
   m_Name: Tunel2parte
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1893,7 +1893,7 @@ GameObject:
   - component: {fileID: 1280825768803529618}
   m_Layer: 0
   m_Name: BorraTrafi8ApareceTrafi10
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2131,7 +2131,7 @@ GameObject:
   - component: {fileID: 1280825768936175060}
   m_Layer: 0
   m_Name: BorrarExCa2apareceExCa4
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2567,7 +2567,7 @@ GameObject:
   - component: {fileID: 1280825769283576791}
   m_Layer: 0
   m_Name: Borra Trafic3 ApareceTrafi5
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2755,7 +2755,7 @@ GameObject:
   - component: {fileID: 1280825769298264111}
   m_Layer: 0
   m_Name: BorraTrafi2ApareceTrafi4
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2943,7 +2943,7 @@ GameObject:
   - component: {fileID: 1280825769368149789}
   m_Layer: 0
   m_Name: BorrarTrafi11
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3115,7 +3115,7 @@ GameObject:
   - component: {fileID: 1280825769489201980}
   m_Layer: 0
   m_Name: BorrarTunel2
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3435,7 +3435,7 @@ GameObject:
   - component: {fileID: 1280825769677997716}
   m_Layer: 0
   m_Name: BorrarTrafi10
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3579,7 +3579,7 @@ GameObject:
   - component: {fileID: 1280825769868304263}
   m_Layer: 0
   m_Name: ApareceTrafi2
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3684,7 +3684,7 @@ GameObject:
   - component: {fileID: 1280825769945982714}
   m_Layer: 0
   m_Name: BorraExCaapareceExCa3
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3789,7 +3789,7 @@ GameObject:
   - component: {fileID: 1280825769974627530}
   m_Layer: 0
   m_Name: BorrarExteriorCarretera
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3894,7 +3894,7 @@ GameObject:
   - component: {fileID: 1280825769989462550}
   m_Layer: 0
   m_Name: BorrarTunel
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3999,7 +3999,7 @@ GameObject:
   - component: {fileID: 1280825769990264171}
   m_Layer: 0
   m_Name: BorraTrafi1ApareceTrafi3
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4104,7 +4104,7 @@ GameObject:
   - component: {fileID: 1280825770126771937}
   m_Layer: 0
   m_Name: CambioCamaraOnBoardYvelocidad
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4258,7 +4258,7 @@ GameObject:
   - component: {fileID: 1280825770154119404}
   m_Layer: 0
   m_Name: BorrarDesguace
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4589,7 +4589,7 @@ GameObject:
   - component: {fileID: 3953358003096686066}
   m_Layer: 0
   m_Name: BorraTunel
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

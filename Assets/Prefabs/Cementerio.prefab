@@ -6245,7 +6245,7 @@ GameObject:
   - component: {fileID: 9194111892778905105}
   m_Layer: 6
   m_Name: BorraCementerioP1
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8252,7 +8252,7 @@ GameObject:
   - component: {fileID: 9194111893120168438}
   m_Layer: 0
   m_Name: BoraN4apareN5
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

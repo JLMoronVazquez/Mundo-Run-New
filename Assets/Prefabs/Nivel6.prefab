@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 8979825003857606766}
   m_Layer: 0
   m_Name: AbrirPuertaLanzadera
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 8979825003980730404}
   m_Layer: 0
   m_Name: abrirAscensor
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3398,7 +3398,7 @@ GameObject:
   - component: {fileID: 8979825005082680504}
   m_Layer: 0
   m_Name: ascensorCierraPuerta
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

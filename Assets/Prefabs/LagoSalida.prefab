@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9111775178118303041}
   m_Layer: 0
   m_Name: ApareceN6BorraN5
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 9111775178301102235}
   m_Layer: 0
   m_Name: ApareceProtagonista
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
