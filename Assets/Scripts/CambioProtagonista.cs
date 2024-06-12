@@ -8,7 +8,7 @@ public class CambioProtagonista : MonoBehaviour
     public GameObject barco;
 
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
     //public FuncionBarco funcionBarco;
     public Camaras camara;
 

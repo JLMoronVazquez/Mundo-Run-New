@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     public Animator AscensorPuertaD2;
     public Animator AscensorPuertaI2;
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
     public despeguecohete despegueactivar;
 
     public GameObject PuertaAsceD1;
@@ -174,7 +174,7 @@ public class NewBehaviourScript : MonoBehaviour
             yield return null;
         }
 
-        // Asegúrate de que el volumen sea cero al final
+        // Asegï¿½rate de que el volumen sea cero al final
         sonidosSubidaAscensor.volume = 0;
 
 
@@ -197,7 +197,7 @@ public class NewBehaviourScript : MonoBehaviour
             yield return null;
         }
 
-        // Asegúrate de que el volumen sea cero al final
+        // Asegï¿½rate de que el volumen sea cero al final
         cancionPrincipalBajavolumen.volume = 0;
 
 
@@ -221,7 +221,7 @@ public class NewBehaviourScript : MonoBehaviour
             yield return null;
         }
 
-        // Asegúrate de que el volumen sea cero al final
+        // Asegï¿½rate de que el volumen sea cero al final
         sonidoCohetebajando.volume = 0;
 
         yield return new WaitForSeconds(1f);
