@@ -9,6 +9,9 @@ TagManager:
   - Agachate
   - Frenar
   - Cochera
+  - Trafico
+  - MuroInvisible
+  - TimeStart
   layers:
   - Default
   - TransparentFX
