@@ -109,6 +109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: changeScene2
       objectReference: {fileID: 0}
+    - target: {fileID: 296392167293301807, guid: 85621a8234e12914891debac14a1fb65,
+        type: 3}
+      propertyPath: m_TagString
+      value: MuroInvisible
+      objectReference: {fileID: 0}
     - target: {fileID: 296392167595360848, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -202,7 +207,7 @@ PrefabInstance:
     - target: {fileID: 296392168541283076, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 296392168567863769, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
