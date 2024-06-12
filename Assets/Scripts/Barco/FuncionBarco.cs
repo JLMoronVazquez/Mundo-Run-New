@@ -11,7 +11,7 @@ public class FuncionBarco : MonoBehaviour
     public float LimitedePistaPositivo = 3;
     public float LimitedePistanegativo = -3;
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
 
 
     public BoxCollider Choque;
@@ -62,7 +62,7 @@ public class FuncionBarco : MonoBehaviour
 
     private void Start()
     {
-        PararMundo = FindObjectOfType<GiroMundo>();
+        PararMundo = FindObjectOfType<RotateWorld>();
 
         //currentNumber = VelocidadMaxF1;
 

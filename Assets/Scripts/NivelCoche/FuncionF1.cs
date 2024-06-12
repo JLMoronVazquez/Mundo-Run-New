@@ -11,7 +11,7 @@ public class FuncionF1 : MonoBehaviour
     public float LimitedePistaPositivo = 3;
     public float LimitedePistanegativo = -3;
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
 
 
     public BoxCollider Choque;
@@ -70,7 +70,7 @@ public class FuncionF1 : MonoBehaviour
     public float speedHaciatrasinPiloto = 10;
     private void Start()
     {
-        PararMundo = FindObjectOfType<GiroMundo>();
+        PararMundo = FindObjectOfType<RotateWorld>();
 
         //currentNumber = VelocidadMaxF1;
 

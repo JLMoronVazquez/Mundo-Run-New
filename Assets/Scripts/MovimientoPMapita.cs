@@ -8,8 +8,7 @@ public class MovimientoPMapita : MonoBehaviour
     public bool andaPersonaje = false;
     public Transform personajeMapa;
 
-    public GiroMundo PararMundo;
-
+    public RotateWorld PararMundo;
 
 
     void Start()

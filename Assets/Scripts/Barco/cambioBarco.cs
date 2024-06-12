@@ -8,7 +8,7 @@ public class cambioBarco : MonoBehaviour
     public GameObject barco;
 
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
     public FuncionBarco funcionBarco;
     public Camaras camara;
 
@@ -46,20 +46,12 @@ public class cambioBarco : MonoBehaviour
         yield return new WaitForSeconds(1f);
         camara.Camaraf1 = true;
 
-
-
-
-
     }
 
     IEnumerator AndaElBarco()
     {
         yield return new WaitForSeconds(0.5f);
         funcionBarco.AceleradorInicioBarco = true;
-
-
-
-
 
     }
 }

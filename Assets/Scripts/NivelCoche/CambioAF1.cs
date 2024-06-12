@@ -8,7 +8,7 @@ public class CambioAF1 : MonoBehaviour
     public GameObject F1;
 
 
-    public GiroMundo PararMundo;
+    public RotateWorld PararMundo;
     public FuncionF1 funcionf1;
     public Camaras camara;
 
