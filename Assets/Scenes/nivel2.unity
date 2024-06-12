@@ -676,13 +676,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d5c8385e52cf42a6380568544beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRot: 60
-  normalSpeed: 8
+  normalSpeed: 60
   rollSpeed: 15
   tripSpeed: 5
   carSpeed: 20
   boatSpeed: 25
   stopSpeed: 0
+  speedRot: 60
 --- !u!54 &222927749
 Rigidbody:
   m_ObjectHideFlags: 0

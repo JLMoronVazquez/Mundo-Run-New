@@ -900,7 +900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222927746}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.9563048, y: 0, z: 0, w: -0.29237172}
+  m_LocalRotation: {x: 0.19680177, y: 0, z: 0, w: 0.98044336}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -908,7 +908,7 @@ Transform:
   - {fileID: 147816904}
   - {fileID: 178502601}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -214, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.7, y: 0, z: 0}
 --- !u!114 &222927748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,13 +921,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d5c8385e52cf42a6380568544beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRot: 60
-  normalSpeed: 8
+  normalSpeed: 60
   rollSpeed: 15
   tripSpeed: 5
   carSpeed: 20
   boatSpeed: 25
   stopSpeed: 0
+  speedRot: 60
 --- !u!54 &222927749
 Rigidbody:
   m_ObjectHideFlags: 0
