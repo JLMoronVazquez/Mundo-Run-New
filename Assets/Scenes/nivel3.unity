@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1280825768352333476, guid: 51158b9dab7f3094383ec29b6e00e0d0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1280825768378750012, guid: 51158b9dab7f3094383ec29b6e00e0d0,
         type: 3}
       propertyPath: m_IsActive
@@ -628,6 +633,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1879220991}
+    - targetCorrespondingSourceObject: {fileID: 1280825768352317784, guid: 51158b9dab7f3094383ec29b6e00e0d0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1879220996}
     - targetCorrespondingSourceObject: {fileID: 1280825769677997705, guid: 51158b9dab7f3094383ec29b6e00e0d0,
         type: 3}
       insertIndex: -1
@@ -758,7 +767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222927746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.97886753, y: 0, z: 0, w: 0.2044954}
+  m_LocalRotation: {x: -0.970296, y: 0, z: 0, w: -0.2419207}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -766,7 +775,7 @@ Transform:
   - {fileID: 147816904}
   - {fileID: 178502601}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -1283.6, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -1648, y: 0, z: 0}
 --- !u!114 &222927748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e93b54881df9d44aa3582551d5cfce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRot: 20
+  speedRot: 60
   Mundo: {fileID: 222927747}
 --- !u!1 &247515313 stripped
 GameObject:
@@ -1501,6 +1510,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeZone: {fileID: 1119993814}
   deactiveZone: {fileID: 774155093}
+--- !u!114 &1879220996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879220986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08b46ad3b97f22489065195701a5684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeZone: {fileID: 388114909}
 --- !u!1 &2095856489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1280825768288733273, guid: 51158b9dab7f3094383ec29b6e00e0d0,
