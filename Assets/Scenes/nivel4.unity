@@ -702,6 +702,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 377.846
       objectReference: {fileID: 0}
+    - target: {fileID: 9194111892409131574, guid: b140ff8b271020c45b1d73b041654814,
+        type: 3}
+      propertyPath: m_TagString
+      value: MuroInvisible
+      objectReference: {fileID: 0}
     - target: {fileID: 9194111893120168435, guid: b140ff8b271020c45b1d73b041654814,
         type: 3}
       propertyPath: m_LocalScale.x

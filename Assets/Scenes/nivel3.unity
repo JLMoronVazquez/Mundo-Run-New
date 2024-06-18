@@ -545,6 +545,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4963008890121114218, guid: 5398bc864e9b63944a31b21cceda3332,
+        type: 3}
+      propertyPath: m_TagString
+      value: MuroInvisible
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2053,7 +2058,7 @@ GameObject:
   - component: {fileID: 1881312740}
   m_Layer: 0
   m_Name: "ActivadorCa\xF1on"
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
