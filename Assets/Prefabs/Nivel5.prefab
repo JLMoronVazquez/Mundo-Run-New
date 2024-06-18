@@ -3090,7 +3090,7 @@ GameObject:
   - component: {fileID: 1384023079784322937}
   m_Layer: 0
   m_Name: LagoExteriorN5p1
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
