@@ -13,6 +13,7 @@ public class PlayerMov : MonoBehaviour
     public RotateWorld worldRotation;
 
     public float scaleWhenRolling;
+    public float positionWhenRolling;
 
     public GameObject body;
 
@@ -27,6 +28,7 @@ public class PlayerMov : MonoBehaviour
     private float minHeight;
 
     private float originalScale;
+    private float originalBodyHeight;
 
     public void Awake()
     {
@@ -34,6 +36,7 @@ public class PlayerMov : MonoBehaviour
         playerSpeed = normalSpeed;
         minHeight = transform.position.y - 0.2f;
         originalScale = body.transform.localScale.y;
+        originalBodyHeight = body.transform.localPosition.y;
     }
 
     public void Update()
@@ -54,6 +57,11 @@ public class PlayerMov : MonoBehaviour
                 Vector3 scaleBody = body.transform.localScale;
                 scaleBody.y = scaleWhenRolling;
                 body.transform.localScale = scaleBody;
+
+                Vector3 posBody = body.transform.localPosition;
+                posBody.y += positionWhenRolling;
+                body.transform.localPosition = posBody;
+
                 worldRotation.speedRot = worldRotation.rollSpeed;
                 Invoke("GoBackToNormalSpeed", 0.5f);
                 isRolling = true;
@@ -74,6 +82,10 @@ public class PlayerMov : MonoBehaviour
         Vector3 scaleBody = body.transform.localScale;
         scaleBody.y = originalScale;
         body.transform.localScale = scaleBody;
+
+        Vector3 posBody = body.transform.localPosition;
+        posBody.y = originalBodyHeight;
+        body.transform.localPosition = posBody;
     }
 
     public void Jump()
