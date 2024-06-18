@@ -111,6 +111,8 @@ MonoBehaviour:
   maxXPos: 3
   minXPos: -3
   worldRotation: {fileID: 0}
+  scaleWhenRolling: 0.4
+  body: {fileID: 5077078416780298561}
   isJumping: 0
   isOnPlatform: 0
   somethingLeft: 0
@@ -264,8 +266,8 @@ Transform:
   m_GameObject: {fileID: 3678518354329719150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.581, z: -0.179}
-  m_LocalScale: {x: 0.4, y: 1, z: 0.7}
+  m_LocalPosition: {x: -0.3, y: 0.4, z: -0.18}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8608313790442948525}
@@ -384,8 +386,8 @@ Transform:
   m_GameObject: {fileID: 5077078416780298561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.581, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 0.7}
+  m_LocalPosition: {x: 0, y: 0.727, z: 0}
+  m_LocalScale: {x: 0.7, y: 1.4, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8608313790442948525}
@@ -503,8 +505,8 @@ Transform:
   m_GameObject: {fileID: 6831884177703910798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.581, z: -0.179}
-  m_LocalScale: {x: 0.4, y: 1, z: 0.7}
+  m_LocalPosition: {x: 0.3, y: 0.4, z: -0.18}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8608313790442948525}
@@ -642,13 +644,14 @@ GameObject:
   - component: {fileID: 6689376014231110737}
   - component: {fileID: 2552055359261203879}
   - component: {fileID: 1749434566083564333}
+  - component: {fileID: 4512609751258319942}
   m_Layer: 0
   m_Name: Head
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1654965748714863291
 Transform:
   m_ObjectHideFlags: 0
@@ -658,8 +661,8 @@ Transform:
   m_GameObject: {fileID: 7604711869808696572}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 0.7}
+  m_LocalPosition: {x: 0, y: 1.121, z: 0.012}
+  m_LocalScale: {x: 0.43286875, y: 0.64100516, z: 0.471009}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8608313790442948525}
@@ -731,7 +734,20 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4512609751258319942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7604711869808696572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ccdd44944fec2449697f841012a527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plyMov: {fileID: 4359108983955503711}

@@ -12,6 +12,10 @@ public class PlayerMov : MonoBehaviour
 
     public RotateWorld worldRotation;
 
+    public float scaleWhenRolling;
+
+    public GameObject body;
+
     [HideInInspector] public bool isJumping = false;
     [HideInInspector] public bool isOnPlatform = false;
     [HideInInspector] public bool somethingLeft = false;
@@ -22,11 +26,14 @@ public class PlayerMov : MonoBehaviour
     private Rigidbody rb;
     private float minHeight;
 
+    private float originalScale;
+
     public void Awake()
     {
         rb = GetComponent<Rigidbody>();
         playerSpeed = normalSpeed;
         minHeight = transform.position.y - 0.2f;
+        originalScale = body.transform.localScale.y;
     }
 
     public void Update()
@@ -42,8 +49,11 @@ public class PlayerMov : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S))
         {
-            if (!isRolling && !isJumping)
+            if (!isRolling && !isJumping && worldRotation.speedRot != worldRotation.stopSpeed)
             {
+                Vector3 scaleBody = body.transform.localScale;
+                scaleBody.y = scaleWhenRolling;
+                body.transform.localScale = scaleBody;
                 worldRotation.speedRot = worldRotation.rollSpeed;
                 Invoke("GoBackToNormalSpeed", 0.5f);
                 isRolling = true;
@@ -57,7 +67,13 @@ public class PlayerMov : MonoBehaviour
 
     public void GoBackToNormalSpeed()
     {
-        worldRotation.speedRot = worldRotation.normalSpeed;
+        if (worldRotation.speedRot == worldRotation.rollSpeed)
+        {
+            worldRotation.speedRot = worldRotation.normalSpeed;
+        }
+        Vector3 scaleBody = body.transform.localScale;
+        scaleBody.y = originalScale;
+        body.transform.localScale = scaleBody;
     }
 
     public void Jump()
