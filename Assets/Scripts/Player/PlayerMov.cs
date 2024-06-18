@@ -67,10 +67,6 @@ public class PlayerMov : MonoBehaviour
                 isRolling = true;
             }
         }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            isRolling = false;
-        }
     }
 
     public void GoBackToNormalSpeed()
@@ -86,6 +82,7 @@ public class PlayerMov : MonoBehaviour
         Vector3 posBody = body.transform.localPosition;
         posBody.y = originalBodyHeight;
         body.transform.localPosition = posBody;
+        isRolling = false;
     }
 
     public void Jump()
