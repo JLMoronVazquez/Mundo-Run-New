@@ -574,6 +574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV2
       objectReference: {fileID: 0}
+    - target: {fileID: 4359108983955503711, guid: bc5e0176f4b4ed24db0fd3b72a0355f0,
+        type: 3}
+      propertyPath: worldRotation
+      value: 
+      objectReference: {fileID: 222927748}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

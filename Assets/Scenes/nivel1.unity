@@ -322,11 +322,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV2
       objectReference: {fileID: 0}
+    - target: {fileID: 4359108983955503711, guid: bc5e0176f4b4ed24db0fd3b72a0355f0,
+        type: 3}
+      propertyPath: worldRotation
+      value: 
+      objectReference: {fileID: 428288259}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5e0176f4b4ed24db0fd3b72a0355f0, type: 3}
+--- !u!114 &428288259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3221855433972618460, guid: b2d756638f58e054aae5be5de671e02d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6229234039478369463}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161d5c8385e52cf42a6380568544beae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226523709
 GameObject:
   m_ObjectHideFlags: 0
