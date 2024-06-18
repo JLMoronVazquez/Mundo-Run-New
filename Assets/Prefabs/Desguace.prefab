@@ -2357,7 +2357,7 @@ GameObject:
   - component: {fileID: 4963008890121114217}
   m_Layer: 0
   m_Name: SonidoDesguace
-  m_TagString: Untagged
+  m_TagString: MuroInvisible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
