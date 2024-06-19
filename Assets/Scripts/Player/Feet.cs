@@ -22,6 +22,7 @@ public class Feet : MonoBehaviour
         if (other.GetComponent<Collider>().CompareTag("Tropiezo"))
         {
             plyMov.worldRotation.speedRot = plyMov.worldRotation.tripSpeed;
+            plyMov.isJumping = false;
         }
     }
 
