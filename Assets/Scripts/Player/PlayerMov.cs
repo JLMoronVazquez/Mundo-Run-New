@@ -6,27 +6,24 @@ public class PlayerMov : MonoBehaviour
     public float normalSpeed = 5f;
     public float slowSpeed = 2f;
     public float jumpForce = 5f;
-
     public float maxXPos = 3;
     public float minXPos = -3;
-
-    public RotateWorld worldRotation;
-
     public float scaleWhenRolling;
     public float positionWhenRolling;
-
+    
+    public Animator animator;
+    public RotateWorld worldRotation;
     public GameObject body;
 
     [HideInInspector] public bool isJumping = false;
     [HideInInspector] public bool isOnPlatform = false;
     [HideInInspector] public bool somethingLeft = false;
     [HideInInspector] public bool somethingRight = false;
-    private bool isRolling = false;
-
     [HideInInspector] public float playerSpeed;
+
+    private bool isRolling = false;
     private Rigidbody rb;
     private float minHeight;
-
     private float originalScale;
     private float originalBodyHeight;
 
@@ -54,6 +51,7 @@ public class PlayerMov : MonoBehaviour
         {
             if (!isRolling && !isJumping && worldRotation.speedRot != worldRotation.stopSpeed)
             {
+                animator.SetBool("SeAgacha", true);
                 Vector3 scaleBody = body.transform.localScale;
                 scaleBody.y = scaleWhenRolling;
                 body.transform.localScale = scaleBody;
@@ -71,6 +69,7 @@ public class PlayerMov : MonoBehaviour
 
     public void GoBackToNormalSpeed()
     {
+        animator.SetBool("SeAgacha", false);
         if (worldRotation.speedRot == worldRotation.rollSpeed)
         {
             worldRotation.speedRot = worldRotation.normalSpeed;
@@ -91,6 +90,7 @@ public class PlayerMov : MonoBehaviour
         {
             if (!isRolling && !isJumping)
             {
+                animator.Play("Jump");
                 rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
                 isOnPlatform = false;
                 isJumping = true;
@@ -130,6 +130,11 @@ public class PlayerMov : MonoBehaviour
             Vector3 posPlayer = transform.position;
             posPlayer.y = minHeight;
             transform.position = posPlayer;
+
+            if( rb.velocity.y < 0 )
+            {
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+            }
         }
     }
 
