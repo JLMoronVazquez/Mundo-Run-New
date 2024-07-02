@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161d5c8385e52cf42a6380568544beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 8
+  normalSpeed: 10
   rollSpeed: 15
   tripSpeed: 5
   carSpeed: 20
@@ -321,31 +321,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -720.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547286302860163761, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
-        type: 3}
-      propertyPath: m_TagString
-      value: MuroInvisible
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547286303001761605, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547286303001761605, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
-        type: 3}
-      propertyPath: m_TagString
-      value: TimeStart
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547286304054727970, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
-        type: 3}
-      propertyPath: m_TagString
-      value: MuroInvisible
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547286304474185176, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
-        type: 3}
-      propertyPath: m_TagString
-      value: MuroInvisible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

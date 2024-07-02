@@ -397,21 +397,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1286384876066971306, guid: b2d756638f58e054aae5be5de671e02d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3221855433972618460, guid: b2d756638f58e054aae5be5de671e02d,
-        type: 3}
-      propertyPath: normalSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6511379051491472047, guid: b2d756638f58e054aae5be5de671e02d,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6956872855331855757, guid: b2d756638f58e054aae5be5de671e02d,
         type: 3}
       propertyPath: m_Name
