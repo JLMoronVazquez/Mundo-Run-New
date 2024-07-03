@@ -951,6 +951,11 @@ PrefabInstance:
       propertyPath: activeZone
       value: 
       objectReference: {fileID: 5162647881837529171}
+    - target: {fileID: 5273404328136991467, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8d44029e31d54544a68dccea9220807, type: 2}
     - target: {fileID: 5921698304473908030, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
         type: 3}
       propertyPath: m_Name
