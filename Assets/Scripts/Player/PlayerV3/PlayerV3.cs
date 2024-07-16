@@ -31,7 +31,6 @@ public class PlayerV3 : MonoBehaviour
         isGrounded = IsGrounded();
         Move();
         Jump();
-        Roll();
     }
 
     private void Move()
@@ -66,17 +65,12 @@ public class PlayerV3 : MonoBehaviour
         }
     }
 
-    private void Roll()
-    {
-
-    }
-
     private bool IsGrounded()
     {
         RaycastHit hit;
         Vector3 posOrogin = transform.position + Vector3.up * 0.25f;
-        Debug.DrawRay(posOrogin, transform.TransformDirection(Vector3.down* 0.3f), Color.yellow);
-        if (Physics.Raycast(posOrogin, transform.TransformDirection(Vector3.down), out hit, 0.3f, layerJump))
+        Debug.DrawRay(posOrogin, transform.TransformDirection(Vector3.down* 0.5f), Color.yellow);
+        if (Physics.Raycast(posOrogin, transform.TransformDirection(Vector3.down), out hit, 0.5f, layerJump))
         {
             return true;
         }

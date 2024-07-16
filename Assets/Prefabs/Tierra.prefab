@@ -48,15 +48,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalSpeed: 10
-  rollSpeed: 15
+  rollSpeed: 30
   tripSpeed: 5
   carSpeed: 20
   boatSpeed: 25
   stopSpeed: 0
-  player: {fileID: 0}
+  playerTr: {fileID: 0}
+  playerHeadTr: {fileID: 0}
   layerObstacles:
     serializedVersion: 2
     m_Bits: 16
+  layerBrake:
+    serializedVersion: 2
+    m_Bits: 64
+  layerJump:
+    serializedVersion: 2
+    m_Bits: 24
   speedRot: 8
 --- !u!54 &3811668516088732813
 Rigidbody:
@@ -81,7 +88,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 110
   m_CollisionDetection: 0
@@ -121,7 +128,7 @@ PrefabInstance:
     - target: {fileID: 296392167175216532, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
       propertyPath: m_Layer
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 296392167196436536, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
@@ -131,7 +138,7 @@ PrefabInstance:
     - target: {fileID: 296392167293301807, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
       propertyPath: m_Layer
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 296392167293301807, guid: 85621a8234e12914891debac14a1fb65,
         type: 3}
@@ -960,6 +967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nivel 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921698305227488513, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6441776493935925636, guid: dc19ed92cc8ad944a945a5d9f8f52d72,
         type: 3}
