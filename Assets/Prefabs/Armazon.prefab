@@ -1401,6 +1401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2634530659856975701}
+  - component: {fileID: 409233051774254155}
   m_Layer: 0
   m_Name: Armazon
   m_TagString: Untagged
@@ -1424,6 +1425,20 @@ Transform:
   - {fileID: 8315000421779861297}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &409233051774254155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863833814971542323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e350f6f18791b4fb5a3e1698617215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRotation: 30
+  Cartel: {fileID: 7668775618545627015}
 --- !u!1 &4326603126269496514
 GameObject:
   m_ObjectHideFlags: 0
