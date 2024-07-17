@@ -61,7 +61,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &6899309894450045180
 MonoBehaviour:
@@ -77,19 +77,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalSpeed: 5
   slowSpeed: 2
-  jumpForce: 5
-  maxXPos: 3
-  minXPos: -3
+  jumpForce: 10
+  maxXPos: 4
+  minXPos: -4
   layerObstacles:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   layerBrake:
     serializedVersion: 2
     m_Bits: 0
   layerJump:
     serializedVersion: 2
-    m_Bits: 0
-  Head: {fileID: 0}
+    m_Bits: 136
+  Head: {fileID: 5072259552885585696}
 --- !u!136 &4329468616841722387
 CapsuleCollider:
   m_ObjectHideFlags: 0
