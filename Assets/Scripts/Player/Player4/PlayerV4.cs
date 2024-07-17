@@ -18,7 +18,6 @@ public class PlayerV4 : MonoBehaviour
     public GameObject Head;
 
     private float playerSpeed;
-    private bool isGrounded = true;
     private Rigidbody rb;
     private bool isRolling = false;
 
@@ -30,7 +29,6 @@ public class PlayerV4 : MonoBehaviour
 
     public void Update()
     {
-        checkGround();
         MoveX();
         MoveZ();
         Jump();
@@ -38,33 +36,42 @@ public class PlayerV4 : MonoBehaviour
 
     private void MoveZ()
     {
-        
+        if ( Input.GetKey(KeyCode.W) && !CheckAhead() )
+        {
+            Vector3 playerPos = transform.position;
+            playerPos.z += playerSpeed * Time.deltaTime;
+            transform.position = playerPos;
+        }
+
+        if ( Input.GetKey(KeyCode.S) && !CheckBack() )
+        {
+            Vector3 playerPos = transform.position;
+            playerPos.z -= playerSpeed * Time.deltaTime;
+            transform.position = playerPos;
+        }
     }
 
     private void MoveX()
     {
-        rb.velocity = new Vector3(0, rb.velocity.y, 0);
-        Vector3 movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
-        transform.position = transform.position + movementDirection * playerSpeed * Time.deltaTime;
-
-        if (transform.position.x > maxXPos)
+        //Vector3 forceToPlayer = new Vector3();
+        if ( Input.GetKey(KeyCode.A) && transform.position.x > minXPos && !CheckLeft() )
         {
-            Vector3 posPlayer = transform.position;
-            posPlayer.x = maxXPos;
-            transform.position = posPlayer;
+            Vector3 playerPos = transform.position;
+            playerPos.x -= playerSpeed * Time.deltaTime;
+            transform.position = playerPos;
         }
 
-        if (transform.position.x < minXPos)
+        if ( Input.GetKey(KeyCode.D) && transform.position.x < maxXPos && !CheckRight() )
         {
-            Vector3 posPlayer = transform.position;
-            posPlayer.x = minXPos;
-            transform.position = posPlayer;
+            Vector3 playerPos = transform.position;
+            playerPos.x += playerSpeed * Time.deltaTime;
+            transform.position = playerPos;
         }
     }
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && CheckGround())
         {
             if (!isRolling)
             {
@@ -73,9 +80,36 @@ public class PlayerV4 : MonoBehaviour
         }
     }
 
-    private void checkGround()
+    private bool CheckGround()
     {
         Vector3 origin = transform.position + Vector3.up * 0.15f;
-        isGrounded = Physics.Raycast(origin, Vector3.down, 0.5f, layerJump);
+        return Physics.Raycast(origin, Vector3.down, 0.5f, layerJump);
     }
+
+    private bool CheckLeft()
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.15f;
+        Debug.DrawRay(origin, Vector3.left, Color.red);
+        return Physics.Raycast(origin, Vector3.left, 0.5f, layerObstacles);
+    }
+
+    private bool CheckRight()
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.15f;
+        return Physics.Raycast(origin, Vector3.right, 0.5f, layerObstacles);
+    }
+
+    private bool CheckAhead()
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.15f;
+        return Physics.Raycast(origin, Vector3.forward, 0.5f, layerObstacles);
+    }
+
+    private bool CheckBack()
+    {
+        Vector3 origin = transform.position + Vector3.up * 0.15f;
+        return Physics.Raycast(origin, Vector3.back, 0.5f, layerObstacles);
+    }
+
+
 }
