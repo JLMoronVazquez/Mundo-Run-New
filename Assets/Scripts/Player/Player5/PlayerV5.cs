@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerV5 : MonoBehaviour
 {
     public float speed, rollSpeed, normalSpeed, tripSpeed;
-    public float rollDuration, tripDuration;
+    public float rollDuration, rollCooldownDuration, tripDuration;
     public float jumpForce, customGravity;
     public float rotationSpeed;
     public Transform head, model;
@@ -15,8 +15,8 @@ public class PlayerV5 : MonoBehaviour
     public LayerMask layerJump, layerTrip, layerObstacles;
 
     private Rigidbody rb;
-    private bool isRolling, isTripping;
-    private float timerRoll, timerTrip;
+    private bool isRolling, isTripping, isRollInCooldown;
+    private float timerRoll, timerTrip, timerRollCooldown;
 
     // Start is called before the first frame update
     void Awake()
@@ -32,7 +32,7 @@ public class PlayerV5 : MonoBehaviour
         Move();
         Jump();
         Roll();
-        Trip(); 
+        Trip();
     }
 
     public void Move()
@@ -41,19 +41,19 @@ public class PlayerV5 : MonoBehaviour
         inputMov.x = Input.GetAxisRaw("Horizontal");
         inputMov.y = Input.GetAxisRaw("Vertical");
         Orientate(inputMov);
-        
+
         inputMov = inputMov.normalized * speed;
 
-        if( !CheckAhead(inputMov) )
+        if (!CheckAhead(inputMov))
         {
             rb.velocity = new Vector3(inputMov.x, rb.velocity.y, inputMov.y);
         }
-        
+
     }
 
-    private void Orientate( Vector2 direction )
+    private void Orientate(Vector2 direction)
     {
-        if( direction.magnitude > 0.5f )
+        if (direction.magnitude > 0.5f)
         {
             head.localPosition = new Vector3(direction.x, 0, direction.y);
             model.transform.DOLookAt(head.position, rotationSpeed);
@@ -62,9 +62,9 @@ public class PlayerV5 : MonoBehaviour
 
     private void Jump()
     {
-        if( !CheckGround() )
+        if (!CheckGround())
         {
-            rb.AddForce(Vector3.down * customGravity * 30 * Time.deltaTime );
+            rb.AddForce(Vector3.down * customGravity * 30 * Time.deltaTime);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && CheckGround())
@@ -90,21 +90,31 @@ public class PlayerV5 : MonoBehaviour
 
     private void Roll()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && CheckGround() && !isRolling && !isTripping)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && CheckGround() && !isRollInCooldown && !isTripping)
         {
+            isRollInCooldown = true;
             isRolling = true;
             speed = rollSpeed;
             timerRoll = rollDuration;
+            timerRollCooldown = rollCooldownDuration;
         }
 
-        if( isRolling )
+        if (isRolling)
         {
             timerRoll -= Time.deltaTime;
-            if( timerRoll < 0 )
+            if (timerRoll < 0)
             {
                 speed = normalSpeed;
-                timerRoll = rollDuration;
                 isRolling = false;
+            }
+        }
+
+        if (isRollInCooldown)
+        {
+            timerRollCooldown -= Time.deltaTime;
+            if (timerRollCooldown < 0)
+            {
+                isRollInCooldown = false;
             }
         }
     }
@@ -118,10 +128,10 @@ public class PlayerV5 : MonoBehaviour
             timerTrip = tripDuration;
         }
 
-        if( isTripping )
+        if (isTripping)
         {
             timerRoll -= Time.deltaTime;
-            if( timerTrip < 0 )
+            if (timerTrip < 0)
             {
                 speed = normalSpeed;
                 timerTrip = tripDuration;
@@ -130,7 +140,7 @@ public class PlayerV5 : MonoBehaviour
         }
     }
 
-    private bool CheckAhead( Vector2 direction )
+    private bool CheckAhead(Vector2 direction)
     {
         Vector3 origin = transform.position + Vector3.up * 0.15f;
         return Physics.Raycast(origin, direction, 0.5f, layerObstacles);

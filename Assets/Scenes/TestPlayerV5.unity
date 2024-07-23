@@ -1478,7 +1478,7 @@ PrefabInstance:
     - target: {fileID: 1243456716834614679, guid: e761de0f07e73dd439cde40976cb736a,
         type: 3}
       propertyPath: rollSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1243456716834614679, guid: e761de0f07e73dd439cde40976cb736a,
         type: 3}
@@ -1489,6 +1489,11 @@ PrefabInstance:
         type: 3}
       propertyPath: normalSpeed
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243456716834614679, guid: e761de0f07e73dd439cde40976cb736a,
+        type: 3}
+      propertyPath: rollDuration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1243456716834614679, guid: e761de0f07e73dd439cde40976cb736a,
         type: 3}
@@ -1504,6 +1509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: layerJump.m_Bits
       value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243456716834614679, guid: e761de0f07e73dd439cde40976cb736a,
+        type: 3}
+      propertyPath: rollCooldownDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353571805322787916, guid: e761de0f07e73dd439cde40976cb736a,
         type: 3}
