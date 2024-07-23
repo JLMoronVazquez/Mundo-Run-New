@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerV5 : MonoBehaviour
 {
     public float speed, rollSpeed, normalSpeed, tripSpeed;
-    public float rollDuration, rollCooldownDuration, tripDuration;
+    public float rollDuration, rollCooldownDuration, tripDuration, jumpDuration;
     public float jumpForce, customGravity;
     public float rotationSpeed;
     public Transform head, model;
@@ -15,8 +15,8 @@ public class PlayerV5 : MonoBehaviour
     public LayerMask layerJump, layerTrip, layerObstacles;
 
     private Rigidbody rb;
-    private bool isRolling, isTripping, isRollInCooldown;
-    private float timerRoll, timerTrip, timerRollCooldown;
+    private bool isRolling, isTripping, isRollInCooldown, isJumping;
+    private float timerRoll, timerTrip, timerJump, timerRollCooldown;
 
     // Start is called before the first frame update
     void Awake()
@@ -24,6 +24,8 @@ public class PlayerV5 : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         isRolling = false;
         isTripping = false;
+        isRollInCooldown = false;
+        isJumping = false;
     }
 
     // Update is called once per frame
@@ -71,8 +73,28 @@ public class PlayerV5 : MonoBehaviour
         {
             if (!isRolling)
             {
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
+                isJumping = true;
+                timerJump = jumpDuration;
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
             }
+        }
+
+        if (Input.GetKey(KeyCode.Space) && isJumping)
+        {
+            if (timerJump > 0)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+                timerJump -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
     }
 
@@ -140,8 +162,9 @@ public class PlayerV5 : MonoBehaviour
         }
     }
 
-    private bool CheckAhead(Vector2 direction)
+    private bool CheckAhead(Vector2 direction2)
     {
+        Vector3 direction = new Vector3( direction2.x, 0, direction2.y );
         Vector3 origin = transform.position + Vector3.up * 0.15f;
         return Physics.Raycast(origin, direction, 0.5f, layerObstacles);
     }
