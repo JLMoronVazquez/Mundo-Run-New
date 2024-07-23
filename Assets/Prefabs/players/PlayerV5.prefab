@@ -98,20 +98,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e050ea4f79ac044ad1998fa0364292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  rollSpeed: 50
-  normalSpeed: 30
-  tripSpeed: 10
-  rollDuration: 2
+  speed: 6
+  rollSpeed: 15
+  normalSpeed: 6
+  tripSpeed: 2
+  rollDuration: 0.2
+  rollCooldownDuration: 1
   tripDuration: 2
-  jumpForce: 5
-  customGravity: 0
-  rotationSpeed: 0.2
+  jumpDuration: 0.2
+  jumpForce: 8
+  customGravity: 50
+  rotationSpeed: 0.3
   head: {fileID: 9075169257186754271}
   model: {fileID: 8426354847039922040}
   layerJump:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   layerTrip:
     serializedVersion: 2
     m_Bits: 64
