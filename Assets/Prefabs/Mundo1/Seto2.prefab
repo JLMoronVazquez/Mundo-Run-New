@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8066781893747965164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Seto2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,11 +100,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seto2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d505723c2a137494480c8633e5844858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2750468302165870503, guid: d505723c2a137494480c8633e5844858,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5fdef4a1d87d04d4db6e9dbc679b789b, type: 2}
+    - target: {fileID: 2895767802263474953, guid: d505723c2a137494480c8633e5844858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930249640797549767, guid: d505723c2a137494480c8633e5844858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165155246341164202, guid: d505723c2a137494480c8633e5844858,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7320179650419748704, guid: d505723c2a137494480c8633e5844858,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

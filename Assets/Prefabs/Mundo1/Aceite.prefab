@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2363344114475718083}
   - component: {fileID: 5687633555368235126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Aceite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Aceite
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ba56e9a6b77060d4f844a98270f85851,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
