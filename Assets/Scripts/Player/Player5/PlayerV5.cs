@@ -174,8 +174,20 @@ namespace Player
         private bool CheckAhead(Vector2 direction2)
         {
             Vector3 direction = new Vector3(direction2.x, 0, direction2.y);
-            Vector3 origin = transform.position + Vector3.up * 0.15f;
-            return Physics.Raycast(origin, direction, 0.5f, layerObstacles);
+            Vector3 origin1 = transform.position + Vector3.up * 0.15f;
+            Vector3 origin2 = transform.position + Vector3.up * 1f;
+
+            if(Physics.Raycast(origin1, direction, 1f, layerObstacles))
+            {
+                return true;
+            }
+
+            if(Physics.Raycast(origin2, direction, 1f, layerObstacles))
+            {
+                return true;
+            }
+
+            return false;
         }
 
     }
