@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -20,6 +21,9 @@ public class AnimatePlayer5 : MonoBehaviour
         anim.SetBool( "isJumping", playerLogic.isJumping);
         anim.SetBool( "isRolling", playerLogic.isRolling);
         anim.SetBool( "isTripping", playerLogic.isTripping);
-        anim.SetBool( "isRunning", rbOfPlayer.velocity.magnitude > 0.2f && playerLogic.CheckGround() );
+
+        Vector3 velPlayer = rbOfPlayer.velocity;
+        float velocityXZ =  Mathf.Abs(velPlayer.x) + Mathf.Abs(velPlayer.z );
+        anim.SetBool( "isRunning", velocityXZ > 0.2f && playerLogic.CheckGround() );
     }
 }
