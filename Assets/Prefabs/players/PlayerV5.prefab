@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9075169257186754271}
@@ -98,12 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e050ea4f79ac044ad1998fa0364292, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  rollSpeed: 15
-  normalSpeed: 6
-  tripSpeed: 2
-  rollDuration: 0.2
-  rollCooldownDuration: 1
+  speeds:
+    speed: 6
+    rollSpeed: 15
+    normalSpeed: 6
+    tripSpeed: 2
+  rollDuration: 1
+  rollCooldownDuration: 0.5
   tripDuration: 2
   jumpDuration: 0.2
   jumpForce: 8
@@ -120,6 +121,10 @@ MonoBehaviour:
   layerObstacles:
     serializedVersion: 2
     m_Bits: 128
+  isRolling: 0
+  isTripping: 0
+  isRollInCooldown: 0
+  isJumping: 0
 --- !u!1 &2914957490250777636
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,8 +151,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4539855413624231132}
   m_Father: {fileID: 6353571805322787916}
@@ -246,11 +251,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: T Personaje Con Mochila
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 382affe821ae3d54b96c050cf7b61af1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 61d111035a9635d4dbf77812e0b74aff, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 382affe821ae3d54b96c050cf7b61af1,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 382affe821ae3d54b96c050cf7b61af1,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 382affe821ae3d54b96c050cf7b61af1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5044920055476783986}
   m_SourcePrefab: {fileID: 100100000, guid: 382affe821ae3d54b96c050cf7b61af1, type: 3}
+--- !u!1 &3768139454574005862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 382affe821ae3d54b96c050cf7b61af1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4074199721131488055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5044920055476783986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768139454574005862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce669d6258f50ab42840440bced1a928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLogic: {fileID: 1243456716834614679}
+  rbOfPlayer: {fileID: 5381336323448515837}
 --- !u!4 &4539855413624231132 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 382affe821ae3d54b96c050cf7b61af1,
