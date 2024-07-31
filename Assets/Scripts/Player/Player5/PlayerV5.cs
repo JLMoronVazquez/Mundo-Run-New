@@ -161,7 +161,7 @@ namespace Player
 
             if (isTripping)
             {
-                timerRoll -= Time.deltaTime;
+                timerTrip -= Time.deltaTime;
                 if (timerTrip < 0)
                 {
                     speeds.speed = speeds.normalSpeed;
