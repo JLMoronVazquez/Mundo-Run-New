@@ -102,10 +102,10 @@ MonoBehaviour:
     speed: 6
     rollSpeed: 15
     normalSpeed: 6
-    tripSpeed: 2
+    tripSpeed: 1.5
   rollDuration: 0.7
   rollCooldownDuration: 1
-  tripDuration: 2
+  tripDuration: 1
   jumpDuration: 0.2
   jumpForce: 8
   customGravity: 50

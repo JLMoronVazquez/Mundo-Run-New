@@ -16890,8 +16890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTr: {fileID: 532782915}
-  stiffness: 0.5
-  offsetZ: 4.5
+  stiffness: 0.2
+  offsetZ: 4.8
 --- !u!1001 &901894433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45122,26 +45122,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 575691741626107507, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1714356137353834341, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4144726583317771554, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855763157547182400, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5548325369314084546, guid: 45474945781af334fb2fcff348d19bd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45196,16 +45176,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Raiz1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7583238393347038815, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7583238393347038815, guid: 45474945781af334fb2fcff348d19bd8,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
