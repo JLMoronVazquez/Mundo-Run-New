@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5548325369314084546}
+  - component: {fileID: 4355770680216899326}
   m_Layer: 7
   m_Name: Raiz1
-  m_TagString: Untagged
+  m_TagString: Tropiezo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 3661099335224291224}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4355770680216899326
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583238393347038815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.72729933, y: 0.24057612, z: 0.12854958}
+  m_Center: {x: -0.0055227876, y: 0.055725887, z: -0.022965431}
 --- !u!1001 &3838314896094333043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,17 +65,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.44794545
+      value: 0.24477969
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.44794545
+      value: 0.24477969
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.44794545
+      value: 0.24477969
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
@@ -63,7 +85,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4a1c8fdf45e32d4885e1296f18a771c,
         type: 3}
