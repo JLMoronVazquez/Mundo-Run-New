@@ -44855,6 +44855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caminos
       objectReference: {fileID: 0}
+    - target: {fileID: 5915009058401128784, guid: d0d9cf773cd85104eb76d1b2689640f1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4ebbfed6cd69754f88a4a068537a0d4, type: 2}
     - target: {fileID: 7747931053839604208, guid: d0d9cf773cd85104eb76d1b2689640f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45109,41 +45114,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.023
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.014644205
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.014644155
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7069552
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.706955
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 8749008593788691515, guid: 69f102eb680ebec4fbbf335d4b82830b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 182.373
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45225,6 +45195,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4355770680216899326, guid: 45474945781af334fb2fcff348d19bd8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5548325369314084546, guid: 45474945781af334fb2fcff348d19bd8,
         type: 3}
       propertyPath: m_LocalPosition.x
