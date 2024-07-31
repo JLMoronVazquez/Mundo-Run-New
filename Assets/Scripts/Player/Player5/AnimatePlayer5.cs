@@ -19,7 +19,7 @@ public class AnimatePlayer5 : MonoBehaviour
     public void Update()
     {
         anim.SetBool( "isJumping", playerLogic.isJumping);
-        anim.SetBool( "isRolling", playerLogic.isRolling);
+        anim.SetBool( "isRolling", playerLogic.isRollInCooldown);
         anim.SetBool( "isTripping", playerLogic.isTripping);
 
         Vector3 velPlayer = rbOfPlayer.velocity;

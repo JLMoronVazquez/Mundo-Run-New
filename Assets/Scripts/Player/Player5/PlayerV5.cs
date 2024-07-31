@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Player
@@ -51,7 +48,17 @@ namespace Player
             Vector2 inputMov = new Vector2();
             inputMov.x = Input.GetAxisRaw("Horizontal");
             inputMov.y = Input.GetAxisRaw("Vertical");
+
+            //if (!isRolling)
+            //{
             Orientate(inputMov);
+            //}
+
+            if (isRolling && inputMov.magnitude < 0.2f)
+            {
+                inputMov.x = model.transform.forward.x;
+                inputMov.y = model.transform.forward.z;
+            }
 
             inputMov = inputMov.normalized * speeds.speed;
 
@@ -177,12 +184,12 @@ namespace Player
             Vector3 origin1 = transform.position + Vector3.up * 0.15f;
             Vector3 origin2 = transform.position + Vector3.up * 1f;
 
-            if(Physics.Raycast(origin1, direction, 1f, layerObstacles))
+            if (Physics.Raycast(origin1, direction, 0.7f, layerObstacles))
             {
                 return true;
             }
 
-            if(Physics.Raycast(origin2, direction, 1f, layerObstacles))
+            if (Physics.Raycast(origin2, direction, 0.7f, layerObstacles))
             {
                 return true;
             }
