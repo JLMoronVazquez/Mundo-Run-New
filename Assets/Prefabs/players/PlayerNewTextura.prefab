@@ -82,7 +82,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -103,13 +103,13 @@ MonoBehaviour:
     rollSpeed: 15
     normalSpeed: 6
     tripSpeed: 1.5
-  rollDuration: 0.7
+  rollDuration: 0.25
   rollCooldownDuration: 1
   tripDuration: 1
   jumpDuration: 0.2
   jumpForce: 8
   customGravity: 50
-  rotationSpeed: 0.3
+  rotationSpeed: 0.2
   head: {fileID: 9075169257186754271}
   model: {fileID: 8426354847039922040}
   layerJump:
