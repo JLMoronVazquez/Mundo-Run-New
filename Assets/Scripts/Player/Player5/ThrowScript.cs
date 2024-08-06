@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class TrowScript : MonoBehaviour
 {
-    public GameObject package;
+    public GameObject packagePrefab;
     public float lifeSpan;
     public float throwForce;
-    public LayerMask layerGound;
     public Rigidbody playerRb;
 
+    private GameObject package;
     private Rigidbody packageRb;
     private float lifeTimer;
 
     public void Start()
     {
+        package = Instantiate(packagePrefab);
         package.SetActive(false);
         packageRb = package.GetComponent<Rigidbody>();
     }

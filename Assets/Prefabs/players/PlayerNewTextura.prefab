@@ -203,8 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   package: {fileID: 0}
-  lifeSpan: 3
-  throwForce: 10
+  lifeSpan: 1
+  throwForce: 20
   layerGound:
     serializedVersion: 2
     m_Bits: 8
