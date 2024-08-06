@@ -205,6 +205,10 @@ MonoBehaviour:
   package: {fileID: 0}
   lifeSpan: 3
   throwForce: 10
+  layerGound:
+    serializedVersion: 2
+    m_Bits: 8
+  playerRb: {fileID: 5381336323448515837}
 --- !u!1 &5072259552885585696
 GameObject:
   m_ObjectHideFlags: 0

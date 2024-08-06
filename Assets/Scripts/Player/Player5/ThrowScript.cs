@@ -8,6 +8,7 @@ public class TrowScript : MonoBehaviour
     public float lifeSpan;
     public float throwForce;
     public LayerMask layerGound;
+    public Rigidbody playerRb;
 
     private Rigidbody packageRb;
     private float lifeTimer;
@@ -27,22 +28,25 @@ public class TrowScript : MonoBehaviour
 
     public void ThrowPackage()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && lifeTimer < 0)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
-            // Perform the raycast
-            if (Physics.Raycast(ray, out hit, layerGound))
+            float rayDistance = 100;
+            Debug.DrawRay(ray.origin, ray.direction * rayDistance, Color.yellow);
+      
+            if (Physics.Raycast(ray, out hit, rayDistance))
             {
-                // Check if the raycast hit the plane (or any collider attached to the plane)
-
-                // Get the point of collision
-                package.transform.position = hit.point;
-                package.transform.position = hit.transform.position;
-                package.transform.rotation = transform.rotation;
+                packageRb.velocity = Vector3.zero;
                 package.SetActive(true);
-                packageRb.velocity = Vector3.forward * throwForce;
+
+                package.transform.position = transform.position;
+                //package.transform.LookAt(hit.point);
+
+                Vector3 direction = (hit.point - transform.position).normalized;
+                packageRb.AddForce(direction * throwForce, ForceMode.Impulse);
+                packageRb.velocity = packageRb.velocity + playerRb.velocity;
+                
                 lifeTimer = lifeSpan;
             }
         }
