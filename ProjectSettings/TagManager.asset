@@ -12,6 +12,7 @@ TagManager:
   - Trafico
   - MuroInvisible
   - TimeStart
+  - Paquete
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - UI
   - Frenar
   - Obstacle
-  - 
-  - 
+  - Package
+  - Player
   - 
   - 
   - 
