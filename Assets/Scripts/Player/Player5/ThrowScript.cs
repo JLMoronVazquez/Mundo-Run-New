@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrowScript : MonoBehaviour
 {
     public GameObject packagePrefab;
     public float lifeSpan;
+    public float maxOffsetUp;
+    public float distanceToMaxOffset;
     public float throwForce;
     public Rigidbody playerRb;
 
@@ -44,9 +47,12 @@ public class TrowScript : MonoBehaviour
                 package.transform.position = transform.position;
                 //package.transform.LookAt(hit.point);
 
-                Vector3 direction = (hit.point - transform.position).normalized;
+                Vector3 target = hit.point;
+                target.y += GetOffset( target );
+
+                Vector3 direction = (target - transform.position).normalized;
                 packageRb.AddForce(direction * throwForce, ForceMode.Impulse);
-                packageRb.velocity = packageRb.velocity + playerRb.velocity;
+                //packageRb.velocity = packageRb.velocity + playerRb.velocity;
                 
                 lifeTimer = lifeSpan;
             }
@@ -61,6 +67,19 @@ public class TrowScript : MonoBehaviour
         {
             package.SetActive(false);
         }
+    }
+
+    private float GetOffset( Vector3 target )
+    {
+        float offset = maxOffsetUp;
+
+        float dist = Vector3.Distance(target, transform.position);
+        if(dist < distanceToMaxOffset)
+        {
+            offset = ((dist/distanceToMaxOffset) * (dist/distanceToMaxOffset)) * maxOffsetUp;
+        }
+
+        return offset;
     }
 
 }
