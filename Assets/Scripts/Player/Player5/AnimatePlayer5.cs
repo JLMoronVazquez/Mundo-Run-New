@@ -8,6 +8,7 @@ public class AnimatePlayer5 : MonoBehaviour
 {
     private Animator anim;
     public Player.PlayerV5 playerLogic;
+    public ThrowScript  throwLogic;
     public Rigidbody rbOfPlayer;
 
     public void Awake()
@@ -27,5 +28,7 @@ public class AnimatePlayer5 : MonoBehaviour
         anim.SetBool("isRunning", velocityXZ > 0.2f && playerLogic.CheckGround());
         
         anim.SetBool("isFalling", !playerLogic.CheckGround() && !playerLogic.isJumping);
+
+        anim.SetBool("isShooting", throwLogic.isThrowing);
     }
 }

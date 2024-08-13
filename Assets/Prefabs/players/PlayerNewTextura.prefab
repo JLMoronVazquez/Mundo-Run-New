@@ -184,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 4287796900255745377}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalPosition: {x: -0.302, y: 1.336, z: 0.166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -204,11 +204,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   packagePrefab: {fileID: 6683085335149128050, guid: 8f3c9bfdc9fc6844c969a82493c3fdd5,
     type: 3}
+  playerRb: {fileID: 5381336323448515837}
   lifeSpan: 2
   maxOffsetUp: 6
   distanceToMaxOffset: 20
   throwForce: 20
-  playerRb: {fileID: 5381336323448515837}
+  delayTime: 0.2
+  isThrowing: 0
 --- !u!1 &5072259552885585696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,6 +1397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLogic: {fileID: 1243456716834614679}
+  throwLogic: {fileID: 4681639821368571845}
   rbOfPlayer: {fileID: 5381336323448515837}
 --- !u!4 &6739999018408902118 stripped
 Transform:
