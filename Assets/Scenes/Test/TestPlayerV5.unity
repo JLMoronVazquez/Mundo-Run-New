@@ -135,37 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNewTextura
       objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: package
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: lifeSpan
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: offsetUp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: maxOffsetUp
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: packagePrefab
-      value: 
-      objectReference: {fileID: 6683085335149128050, guid: 8f3c9bfdc9fc6844c969a82493c3fdd5,
-        type: 3}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
-        type: 3}
-      propertyPath: distanceToMaxOffset
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 6353571805322787916, guid: ebe4894a2ccaac0428e29a98610e0dfe,
         type: 3}
       propertyPath: m_LocalPosition.x

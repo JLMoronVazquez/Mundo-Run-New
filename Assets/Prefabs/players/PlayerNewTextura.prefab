@@ -202,12 +202,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d312c52f1a822314cb792929cd84578f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  package: {fileID: 0}
-  lifeSpan: 1
+  packagePrefab: {fileID: 6683085335149128050, guid: 8f3c9bfdc9fc6844c969a82493c3fdd5,
+    type: 3}
+  lifeSpan: 2
+  maxOffsetUp: 6
+  distanceToMaxOffset: 20
   throwForce: 20
-  layerGound:
-    serializedVersion: 2
-    m_Bits: 8
   playerRb: {fileID: 5381336323448515837}
 --- !u!1 &5072259552885585696
 GameObject:
