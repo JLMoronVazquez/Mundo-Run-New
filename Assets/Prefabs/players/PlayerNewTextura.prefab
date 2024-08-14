@@ -115,7 +115,7 @@ MonoBehaviour:
   model: {fileID: 8426354847039922040}
   layerJump:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 2184
   layerTrip:
     serializedVersion: 2
     m_Bits: 64
