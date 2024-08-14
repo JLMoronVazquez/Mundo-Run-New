@@ -210,6 +210,9 @@ MonoBehaviour:
   distanceToMaxOffset: 20
   throwForce: 20
   delayTime: 0.2
+  IgnoreMe:
+    serializedVersion: 2
+    m_Bits: 1024
   isThrowing: 0
 --- !u!1 &5072259552885585696
 GameObject:

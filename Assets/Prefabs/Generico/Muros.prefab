@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7501110526230698018}
   - component: {fileID: 8854333978182827410}
   - component: {fileID: 7393567162941735760}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: MuroSigePlayaIzqui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6804794987825926075}
   - component: {fileID: 137682269399862352}
   - component: {fileID: 4782775383409942521}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: MuroSigePlayaIDerech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879248383230173123}
   - component: {fileID: 9201091132692592657}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Muros
   m_TagString: Untagged
   m_Icon: {fileID: 0}

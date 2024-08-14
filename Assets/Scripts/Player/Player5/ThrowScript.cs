@@ -11,6 +11,7 @@ public class ThrowScript : MonoBehaviour
     public float maxOffsetUp, distanceToMaxOffset;
     public float throwForce;
     public float delayTime;
+    public LayerMask IgnoreMe;
 
     private GameObject package;
     private Rigidbody packageRb;
@@ -58,9 +59,8 @@ public class ThrowScript : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         float rayDistance = 100;
-        Debug.DrawRay(ray.origin, ray.direction * rayDistance, Color.yellow);
 
-        if (Physics.Raycast(ray, out hit, rayDistance))
+        if (Physics.Raycast(ray, out hit, rayDistance, ~IgnoreMe ))
         {
             packageRb.velocity = Vector3.zero;
             package.SetActive(true);
