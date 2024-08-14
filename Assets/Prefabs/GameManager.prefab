@@ -58,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eeea0808784c5047ab0498bfd33fa8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curvature: 0.00085
+  curvature: 0.0015

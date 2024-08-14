@@ -14,6 +14,12 @@ public class ChangeCurvature : MonoBehaviour
         Shader.SetGlobalFloat(propertyId, curvature);
     }
 
+    void OnApplicationQuit()
+    {
+        int propertyId = Shader.PropertyToID("_CurvaMundo");
+        Shader.SetGlobalFloat(propertyId, 0);
+    }
+
 }
 
 
