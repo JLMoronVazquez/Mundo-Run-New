@@ -14,6 +14,6 @@ public class MovingPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.DOMove(targetPos.position, timeToMove).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
+        transform.DOMove(targetPos.position, timeToMove).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutCubic);
     }
 }
