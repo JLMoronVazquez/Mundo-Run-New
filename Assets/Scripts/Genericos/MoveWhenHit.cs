@@ -22,6 +22,7 @@ public class MoveWhenHit : MonoBehaviour
         {
             hasMoved = true;
             transform.DOMove( targetPos.position, timeToMove );
+            transform.DORotateQuaternion( targetPos.rotation, timeToMove );
         }
     }
 }
