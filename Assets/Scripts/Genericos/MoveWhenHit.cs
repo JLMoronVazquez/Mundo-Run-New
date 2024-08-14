@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class MoveWhenHit : MonoBehaviour
 {
-    private bool hasMoved;
+    public bool changeRotation;
     public float timeToMove;
     public Transform targetPos;
+
+    private bool hasMoved;
 
 
     // Start is called before the first frame update
@@ -18,11 +20,15 @@ public class MoveWhenHit : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if( !hasMoved && collision.gameObject.CompareTag("Paquete"))
+        if (!hasMoved && collision.gameObject.CompareTag("Paquete"))
         {
             hasMoved = true;
-            transform.DOMove( targetPos.position, timeToMove );
-            transform.DORotateQuaternion( targetPos.rotation, timeToMove );
+            transform.DOMove(targetPos.position, timeToMove);
+
+            if (changeRotation)
+            {
+                transform.DORotateQuaternion(targetPos.rotation, timeToMove);
+            }
         }
     }
 }
