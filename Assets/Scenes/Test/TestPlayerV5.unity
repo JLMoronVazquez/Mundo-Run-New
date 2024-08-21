@@ -135,10 +135,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNewTextura
       objectReference: {fileID: 0}
-    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
+    - target: {fileID: 4329468616841722387, guid: ebe4894a2ccaac0428e29a98610e0dfe,
         type: 3}
-      propertyPath: IgnoreMe.m_Bits
-      value: 1536
+      propertyPath: m_Height
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329468616841722387, guid: ebe4894a2ccaac0428e29a98610e0dfe,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381336323448515837, guid: ebe4894a2ccaac0428e29a98610e0dfe,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6353571805322787916, guid: ebe4894a2ccaac0428e29a98610e0dfe,
         type: 3}
