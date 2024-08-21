@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6305768121150131444}
-  - component: {fileID: 2589114957565245357}
+  - component: {fileID: 3474275636749344089}
+  - component: {fileID: 9014135481469200792}
   m_Layer: 7
   m_Name: TractorRojo
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   - {fileID: 5839793746791559334}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2589114957565245357
+--- !u!65 &3474275636749344089
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,8 +53,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.7763453, y: 2.7396097, z: 2.388335}
-  m_Center: {x: -0.22489381, y: 1.3184416, z: 0.004663825}
+  m_Size: {x: 1.4284778, y: 1.3073099, z: 1.1113203}
+  m_Center: {x: 0.019530296, y: 1.8882569, z: -0.01627934}
+--- !u!65 &9014135481469200792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909988118169249397}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7763453, y: 1.4491483, z: 2.388335}
+  m_Center: {x: -0.22489381, y: 0.6732109, z: 0.004663825}
 --- !u!1001 &6233443703352170317
 PrefabInstance:
   m_ObjectHideFlags: 0
