@@ -21,6 +21,8 @@ namespace Player
         public LayerMask layerJump, layerTrip, layerObstacles;
 
         private Rigidbody rb;
+        private CapsuleCollider playerCollider;
+        private float originalColliderHeight, originalColiderPosY;
         [HideInInspector] public bool isRolling, isTripping, isRollInCooldown, isJumping;
         private float timerRoll, timerTrip, timerJump, timerRollCooldown;
 
@@ -28,6 +30,9 @@ namespace Player
         void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            playerCollider = GetComponent<CapsuleCollider>();
+            originalColliderHeight = playerCollider.height;
+            originalColiderPosY = playerCollider.center.y;
             isRolling = false;
             isTripping = false;
             isRollInCooldown = false;
@@ -135,6 +140,8 @@ namespace Player
                 speeds.speed = speeds.rollSpeed;
                 timerRoll = rollDuration;
                 timerRollCooldown = rollCooldownDuration;
+                playerCollider.height /= 3;
+                playerCollider.center = Vector3.up * 0.3f;
             }
 
             if (isRolling)
@@ -153,6 +160,8 @@ namespace Player
                 if (timerRollCooldown < 0)
                 {
                     isRollInCooldown = false;
+                    playerCollider.height = originalColliderHeight;
+                    playerCollider.center = Vector3.up * originalColiderPosY;
                 }
             }
         }
