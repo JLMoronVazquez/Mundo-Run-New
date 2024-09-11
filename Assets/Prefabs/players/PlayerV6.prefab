@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 5381336323448515837}
   - component: {fileID: 4329468616841722387}
   - component: {fileID: 1243456716834614679}
+  - component: {fileID: 2768227604406396968}
   m_Layer: 9
-  m_Name: PlayerNewTextura
+  m_Name: PlayerV6
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +127,21 @@ MonoBehaviour:
   isTripping: 0
   isRollInCooldown: 0
   isJumping: 0
+--- !u!114 &2768227604406396968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172135657621526123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ca06d4a582fd842b29ccda3c0a78ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mask:
+    serializedVersion: 2
+    m_Bits: 129
 --- !u!1 &2914957490250777636
 GameObject:
   m_ObjectHideFlags: 0
