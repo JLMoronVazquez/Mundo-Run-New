@@ -22,7 +22,7 @@ public class SeeThrought : MonoBehaviour
         Ray ray = new Ray(transform.position, playerPosDir.normalized);
         if (Physics.Raycast(ray, 3000, mask))
         {
-            Shader.SetGlobalFloat(sizeID, 6);
+            Shader.SetGlobalFloat(sizeID, 0.5f);
         }
         else
         {
