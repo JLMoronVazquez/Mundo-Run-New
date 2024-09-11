@@ -10,6 +10,7 @@ public class SeeThrought : MonoBehaviour
 
     private Camera cam;
     public float circleSize;
+    public float offsetDown;
 
     public void Start()
     {
@@ -30,7 +31,9 @@ public class SeeThrought : MonoBehaviour
             Shader.SetGlobalFloat(sizeID, 0);
         }
 
-        Vector3 playerPosView = cam.WorldToViewportPoint(transform.position);
+        Vector3 posWithOffset = transform.position;
+        posWithOffset.y -= offsetDown;
+        Vector3 playerPosView = cam.WorldToViewportPoint(posWithOffset);
         playerPosView.y += 0.1f;
         Shader.SetGlobalVector(posID, playerPosView);
     }
