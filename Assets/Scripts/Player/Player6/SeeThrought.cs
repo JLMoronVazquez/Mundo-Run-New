@@ -9,6 +9,7 @@ public class SeeThrought : MonoBehaviour
     public LayerMask mask;
 
     private Camera cam;
+    public float circleSize;
 
     public void Start()
     {
@@ -22,7 +23,7 @@ public class SeeThrought : MonoBehaviour
         Ray ray = new Ray(transform.position, playerPosDir.normalized);
         if (Physics.Raycast(ray, 3000, mask))
         {
-            Shader.SetGlobalFloat(sizeID, 0.5f);
+            Shader.SetGlobalFloat(sizeID, circleSize);
         }
         else
         {
