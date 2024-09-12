@@ -13,6 +13,7 @@ TagManager:
   - MuroInvisible
   - TimeStart
   - Paquete
+  - Transparencia
   layers:
   - Default
   - TransparentFX
