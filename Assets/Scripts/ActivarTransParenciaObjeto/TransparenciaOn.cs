@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TransparenciaOn : MonoBehaviour
 {
-    public bool ok;
- 
+    public bool transparenciaActivada;
     // Referencias a los materiales
     public Material material1;
     public Material material2;
@@ -16,6 +15,7 @@ public class TransparenciaOn : MonoBehaviour
 
     // Referencia al renderer de la caja
     private Renderer rendererCaja;
+   
 
     // Inicializar la referencia al renderer de la caja
     void Start()
@@ -31,26 +31,24 @@ public class TransparenciaOn : MonoBehaviour
         {
             // Cambiar al Material 2
             rendererCaja.material = material2;
-            ok = false;
+            transparenciaActivada = true;
         }
         // Verificar si colisiona con el muro invisible 2
         if (other.gameObject == muro2)
         {
-            // Desactivar la caja (o puedes usar Destroy si prefieres eliminarla)
-            gameObject.SetActive(false);
+            
         }
-
     }
+    private void OnTriggerExit(Collider other)
+    {
+        // Verificar si el objeto que sale es el muro invisible 2
+        if (other.gameObject == muro2 && transparenciaActivada == true)
+        {
+            transparenciaActivada = false;
+            rendererCaja.material = material1;
 
-    //// opcional: cuando el personaje sale del trigger
-    //private void ontriggerexit(collider other)
-    //{
-    //    if (other.comparetag("player"))
-    //    {
-    //        // volver al material 1
-    //        renderercaja.material = material1;
-    //    }
-    //}
+        }
+    }
 }
 
 

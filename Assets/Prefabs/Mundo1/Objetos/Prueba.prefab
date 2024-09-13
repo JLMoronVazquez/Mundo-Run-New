@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ok: 0
   material1: {fileID: 2100000, guid: 5fdef4a1d87d04d4db6e9dbc679b789b, type: 2}
-  material2: {fileID: 2100000, guid: 69522df0460e43a498390ac426c0c1ce, type: 2}
+  material2: {fileID: 2100000, guid: 0ad8155ff34b9ed4b8ac8e844702bb37, type: 2}
   muro1: {fileID: 1881549575444859852, guid: 3638569a7c674844785c9e04d0c7ff8e, type: 3}
   muro2: {fileID: 3081437141010982486, guid: a0b02d4b4742c7d42b073087dd5c6c54, type: 3}
 --- !u!4 &6639246912050391549 stripped
