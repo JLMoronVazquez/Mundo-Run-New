@@ -6,7 +6,7 @@ public class ActivateSegment : MonoBehaviour
 {
     public GameObject segment;
 
-    public void OnTriggerEnter(Collider2D col)
+    public void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
