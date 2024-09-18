@@ -10,7 +10,7 @@ public class Arm : MonoBehaviour
 
     public void ActivateArm()
     {
-        transform.DOMove(posActivated.position, timeToMove);
+        transform.DOMove(posActivated.position, timeToMove).SetUpdate(true);
     }
 
     public void DeActivateArm()
