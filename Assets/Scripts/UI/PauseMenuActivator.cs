@@ -17,11 +17,13 @@ public class PauseMenuActivator : MonoBehaviour
 
             if(onPause)
             {
+                Time.timeScale = 0f;
                 rightArm.ActivateArm();
                 leftArm.ActivateArm();
             }
             else
             {
+                Time.timeScale = 1;
                 rightArm.DeActivateArm();
                 leftArm.DeActivateArm();
             }
