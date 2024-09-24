@@ -172,7 +172,7 @@ MonoBehaviour:
   timeToMove: 1
   isActivated: 0
   responsivenes: 0.3
-  limits: {x: 0.5, y: -2, z: 1.5, w: -1.5}
+  limits: {x: 0.4, y: -2, z: 1.5, w: -1.5}
   clickDuration: 0
   clickDeep: 0
 --- !u!1 &6358848193963781193
