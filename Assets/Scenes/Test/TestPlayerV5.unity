@@ -2890,6 +2890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerV6
       objectReference: {fileID: 0}
+    - target: {fileID: 4681639821368571845, guid: ebe4894a2ccaac0428e29a98610e0dfe,
+        type: 3}
+      propertyPath: IgnoreMe.m_Bits
+      value: 5632
+      objectReference: {fileID: 0}
     - target: {fileID: 6353571805322787916, guid: ebe4894a2ccaac0428e29a98610e0dfe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3804,6 +3809,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
+        type: 3}
+      propertyPath: limits.w
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
+        type: 3}
+      propertyPath: limits.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
+        type: 3}
+      propertyPath: limits.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
+        type: 3}
+      propertyPath: limits.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8383055655665755479, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
