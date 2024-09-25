@@ -129,7 +129,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _MetalicLevel: 0.2
+    - _MetalicLevel: 0.252
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -147,7 +147,7 @@ Material:
     - _emissionLevel: 0
     - _opacity: 1
     - _smothness: 0
-    - _smothnessLevel: 0.3
+    - _smothnessLevel: 0.14
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
