@@ -12,13 +12,22 @@ public class LeftArm : Arm
 
     private Vector3 positionPreClick;
 
+    private float timerClick = 0;
+
     public void LateUpdate()
     {
         if (isActivated)
         {
+            timerClick -= Time.unscaledDeltaTime;
+            if (timerClick > 0)
+            {
+                return;
+            }
+
             HoverHand();
             if (Input.GetMouseButtonDown(0))
             {
+                timerClick = clickDuration * 2;
                 Click();
             }
         }
@@ -30,17 +39,17 @@ public class LeftArm : Arm
         positionPreClick = transform.localPosition;
         Vector3 posClick = transform.localPosition;
         posClick.z += clickDeep;
-        transform.DOLocalMove(posClick, clickDuration).SetUpdate(true);
+        transform.DOLocalMove(posClick, clickDuration).SetLoops(2, LoopType.Yoyo).SetUpdate(true);
     }
 
 
     public void HoverHand()
     {
         Vector3 mouseMov = transform.localPosition;
-        mouseMov.x += Input.GetAxis("Mouse X");
-        mouseMov.y += Input.GetAxis("Mouse Y");
+        mouseMov.x += Input.GetAxis("Mouse X") * responsivenes;
+        mouseMov.y += Input.GetAxis("Mouse Y") * responsivenes;
         CheckLimitis(ref mouseMov);
-        transform.DOLocalMove(mouseMov, responsivenes).SetUpdate(true);
+        transform.localPosition = mouseMov;
     }
 
 

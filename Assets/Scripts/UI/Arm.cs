@@ -6,14 +6,13 @@ using UnityEngine;
 public class Arm : MonoBehaviour
 {
     public Transform posDeactivated, posActivated;
-    public float timeToMove;
+    [HideInInspector] public float timeToMove;
 
     [HideInInspector] public bool isActivated;
 
     public void ActivateArm()
     {
         transform.DOLocalMove(posActivated.localPosition, timeToMove).SetUpdate(true).OnComplete(ArmActivationComplete);
-        
     }
 
     public void DeActivateArm()

@@ -3806,25 +3806,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2039699970117793972, guid: 9a075655e6189d14a900323ac2d297c5,
+    - target: {fileID: 2058912871707968653, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10
+      propertyPath: timeToMove
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2039699970117793972, guid: 9a075655e6189d14a900323ac2d297c5,
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: clickDeep
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2508974599710820322, guid: 9a075655e6189d14a900323ac2d297c5,
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10
+      propertyPath: clickDuration
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2508974599710820322, guid: 9a075655e6189d14a900323ac2d297c5,
+    - target: {fileID: 5789081398521851114, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: responsivenes
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8383055655665755479, guid: 9a075655e6189d14a900323ac2d297c5,
         type: 3}
