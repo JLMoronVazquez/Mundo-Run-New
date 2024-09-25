@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightArm: {fileID: 3121278500084722}
   leftArm: {fileID: 5789081398521851114}
+  timeToMove: 1
 --- !u!1 &4295041876446643402
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,10 +172,10 @@ MonoBehaviour:
   posActivated: {fileID: 773216546059232993}
   timeToMove: 1
   isActivated: 0
-  responsivenes: 0.3
+  responsivenes: 0.15
   limits: {x: 0.3, y: -2, z: 1.5, w: -1.5}
-  clickDuration: 0
-  clickDeep: 0
+  clickDuration: 0.15
+  clickDeep: 0.3
 --- !u!1 &6358848193963781193
 GameObject:
   m_ObjectHideFlags: 0
