@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightArm: {fileID: 3121278500084722}
   leftArm: {fileID: 5789081398521851114}
-  timeToMove: 1
+  timeToMove: 0.5
 --- !u!1 &4295041876446643402
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,9 +173,9 @@ MonoBehaviour:
   timeToMove: 1
   isActivated: 0
   responsivenes: 0.15
-  limits: {x: 0.3, y: -2, z: 1.5, w: -1.5}
+  limits: {x: -0.5, y: -2, z: 0.2, w: -2}
   clickDuration: 0.15
-  clickDeep: 0.3
+  clickDeep: 0.15
 --- !u!1 &6358848193963781193
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 6358848193963781193}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: -1, z: -1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 8047831657487145319}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.3, y: -1, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
