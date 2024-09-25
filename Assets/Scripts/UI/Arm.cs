@@ -12,13 +12,13 @@ public class Arm : MonoBehaviour
 
     public void ActivateArm()
     {
-        transform.DOMove(posActivated.position, timeToMove).SetUpdate(true).OnComplete(ArmActivationComplete);
+        transform.DOLocalMove(posActivated.localPosition, timeToMove).SetUpdate(true).OnComplete(ArmActivationComplete);
         
     }
 
     public void DeActivateArm()
     {
-        transform.DOMove(posDeactivated.position, timeToMove).SetUpdate(true);
+        transform.DOLocalMove(posDeactivated.localPosition, timeToMove).SetUpdate(true);
         isActivated = false;
     }
 

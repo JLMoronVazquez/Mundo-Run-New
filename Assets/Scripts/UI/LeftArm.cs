@@ -12,7 +12,7 @@ public class LeftArm : Arm
 
     private Vector3 positionPreClick;
 
-    public void Update()
+    public void LateUpdate()
     {
         if (isActivated)
         {
