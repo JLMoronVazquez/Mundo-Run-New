@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9170694765973955425}
-  m_Layer: 0
+  - component: {fileID: 8700771091140384384}
+  m_Layer: 7
   m_Name: GrupoTrigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 2445039584506729767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8700771091140384384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8788855851887833627}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.647798, y: 9.4537735, z: 281.474}
+  m_Center: {x: 0.7009878, y: 4.2268867, z: -0.21962945}
 --- !u!1001 &2766406376622633676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43,7 +65,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0725525
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
@@ -53,27 +75,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.14722279
+      value: 0.15174931
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.08377589
+      value: 0.08590983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.18792212
+      value: -0.18999307
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70212686
+      value: 0.7018686
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.68167794
+      value: 0.68110406
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
@@ -83,7 +105,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 67.783
+      value: 67.435
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0cf7a1e7e90fb04391a86d1c9220845,
         type: 3}
@@ -104,6 +126,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrupoTrigal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e0cf7a1e7e90fb04391a86d1c9220845,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
