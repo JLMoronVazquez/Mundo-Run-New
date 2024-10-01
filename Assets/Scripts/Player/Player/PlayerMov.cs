@@ -10,7 +10,7 @@ namespace Player
         public float speed, rollSpeed, normalSpeed, tripSpeed;
     }
 
-    public class PlayerV5 : MonoBehaviour
+    public class PlayerMov : MonoBehaviour
     {
         public Speeds speeds;
         public float rollDuration, rollCooldownDuration, tripDuration, jumpDuration;

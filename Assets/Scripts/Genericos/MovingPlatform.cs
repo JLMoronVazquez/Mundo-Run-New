@@ -12,17 +12,12 @@ public class MovingPlatform : MonoBehaviour
     public float timeToMove;
     public Transform targetPos;
 
-    private bool isForward = true;
-    private Vector3 originalPos;
-    private float timerToMove;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        originalPos = transform.position;
-        timerToMove = 0;
         rb.DOMove(targetPos.position, timeToMove).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutCubic);
     }
 
@@ -31,7 +26,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<PlayerV5>().rbOfGround = this.rb;
+            col.gameObject.GetComponent<PlayerMov>().rbOfGround = this.rb;
         }
     }
 
@@ -39,7 +34,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            col.gameObject.GetComponent<PlayerV5>().rbOfGround = null;
+            col.gameObject.GetComponent<PlayerMov>().rbOfGround = null;
         }
     }
 }

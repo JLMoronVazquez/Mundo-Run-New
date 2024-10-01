@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6353571805322787916}
   - component: {fileID: 5381336323448515837}
   - component: {fileID: 4329468616841722387}
-  - component: {fileID: 1243456716834614679}
+  - component: {fileID: 874064935494081448}
   m_Layer: 9
-  m_Name: PlayerV6
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &1243456716834614679
+--- !u!114 &874064935494081448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce669d6258f50ab42840440bced1a928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLogic: {fileID: 1243456716834614679}
+  playerLogic: {fileID: 874064935494081448}
   throwLogic: {fileID: 4681639821368571845}
   rbOfPlayer: {fileID: 5381336323448515837}
 --- !u!4 &6739999018408902118 stripped
