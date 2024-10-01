@@ -23,8 +23,10 @@ namespace Player
         private Rigidbody rb;
         private CapsuleCollider playerCollider;
         private float originalColliderHeight, originalColiderPosY;
-        [HideInInspector] public bool isRolling, isTripping, isRollInCooldown, isJumping;
+        [HideInInspector] public bool isRolling, isTripping, isRollInCooldown, isJumping, isRunnig;
         private float timerRoll, timerTrip, timerJump, timerRollCooldown;
+
+        [HideInInspector] public Rigidbody rbOfGround = null;
 
         // Start is called before the first frame update
         void Awake()
@@ -54,6 +56,12 @@ namespace Player
             inputMov.x = Input.GetAxisRaw("Horizontal");
             inputMov.y = Input.GetAxisRaw("Vertical");
 
+            isRunnig = false;
+            if( inputMov.magnitude > 0.1f )
+            {
+                isRunnig = true;
+            }
+
             //if (!isRolling)
             //{
             Orientate(inputMov);
@@ -66,10 +74,16 @@ namespace Player
             }
 
             inputMov = inputMov.normalized * speeds.speed;
-
+            
             if (!CheckAhead(inputMov))
             {
-                rb.velocity = new Vector3(inputMov.x, rb.velocity.y, inputMov.y);
+                Vector3 nextVelocity = new Vector3(inputMov.x, rb.velocity.y, inputMov.y);
+                if( rbOfGround != null )
+                {
+                    nextVelocity.x += rbOfGround.velocity.x;
+                    nextVelocity.z += rbOfGround.velocity.z;
+                }
+                rb.velocity = nextVelocity;
             }
 
         }

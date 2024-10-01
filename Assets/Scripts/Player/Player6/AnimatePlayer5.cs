@@ -25,7 +25,7 @@ public class AnimatePlayer5 : MonoBehaviour
 
         Vector3 velPlayer = rbOfPlayer.velocity;
         float velocityXZ = Mathf.Abs(velPlayer.x) + Mathf.Abs(velPlayer.z);
-        anim.SetBool("isRunning", velocityXZ > 0.2f && playerLogic.CheckGround());
+        anim.SetBool("isRunning", playerLogic.isRunnig && playerLogic.CheckGround());
         
         anim.SetBool("isFalling", !playerLogic.CheckGround() && !playerLogic.isJumping);
 
