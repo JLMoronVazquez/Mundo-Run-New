@@ -705,10 +705,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1244139256240225466, guid: 21a7860b893c37748b3414bf172b50ee,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6046784192868029537, guid: 21a7860b893c37748b3414bf172b50ee,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7340073115840017064, guid: 21a7860b893c37748b3414bf172b50ee,
         type: 3}
       propertyPath: m_Name
       value: BrazoMovilDerecho
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713106522196934344, guid: 21a7860b893c37748b3414bf172b50ee,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

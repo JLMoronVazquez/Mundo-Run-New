@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 public class AnimatePlayer5 : MonoBehaviour
 {
     private Animator anim;
-    public Player.PlayerV5 playerLogic;
+    public Player.PlayerMov playerLogic;
     public ThrowScript  throwLogic;
     public Rigidbody rbOfPlayer;
 
