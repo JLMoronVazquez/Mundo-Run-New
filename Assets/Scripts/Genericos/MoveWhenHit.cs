@@ -10,11 +10,15 @@ public class MoveWhenHit : MonoBehaviour
     public Transform targetPos;
 
     private bool hasMoved;
+    Vector3 originalPos;
+    Vector3 originalRotation;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        originalPos = transform.position;
+        originalRotation = transform.eulerAngles;
         hasMoved = false;
     }
 
@@ -30,5 +34,11 @@ public class MoveWhenHit : MonoBehaviour
                 transform.DORotateQuaternion(targetPos.rotation, timeToMove);
             }
         }
+    }
+
+    void OnEnable()
+    {
+        transform.position = originalPos;
+        transform.eulerAngles = originalRotation;
     }
 }

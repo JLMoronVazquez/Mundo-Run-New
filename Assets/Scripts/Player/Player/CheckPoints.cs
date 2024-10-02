@@ -26,6 +26,9 @@ public class CheckPoints : MonoBehaviour
     public void Respawn()
     {
         rb.velocity = Vector3.zero;
+        currentArmazon.currentSegment.transform.GetChild(0).gameObject.SetActive(false);
+        currentArmazon.nextSegment.transform.GetChild(0).gameObject.SetActive(false);
+        currentArmazon.previousSegment.transform.GetChild(0).gameObject.SetActive(false);
         currentArmazon.currentSegment.transform.GetChild(0).gameObject.SetActive(true);
         currentArmazon.nextSegment.transform.GetChild(0).gameObject.SetActive(true);
         currentArmazon.previousSegment.transform.GetChild(0).gameObject.SetActive(true);
