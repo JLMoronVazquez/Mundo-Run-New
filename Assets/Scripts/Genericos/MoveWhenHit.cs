@@ -17,7 +17,7 @@ public class MoveWhenHit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalPos = transform.position;
+        originalPos = transform.localPosition;
         originalRotation = transform.eulerAngles;
         hasMoved = false;
     }
@@ -38,7 +38,7 @@ public class MoveWhenHit : MonoBehaviour
 
     void OnEnable()
     {
-        transform.position = originalPos;
+        transform.localPosition = originalPos;
         transform.eulerAngles = originalRotation;
     }
 }
