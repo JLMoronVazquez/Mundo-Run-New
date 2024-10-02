@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
+    public GameObject currentSegment;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            currentSegment.SetActive(false);
             other.gameObject.GetComponent<CheckPoints>().Respawn();
         }
     }
