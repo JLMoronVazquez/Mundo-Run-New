@@ -10,7 +10,7 @@ public class KillZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            currentSegment.SetActive(false);
+            currentSegment.transform.GetChild(0).gameObject.SetActive(false);
             other.gameObject.GetComponent<CheckPoints>().Respawn();
         }
     }
