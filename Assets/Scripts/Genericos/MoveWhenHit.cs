@@ -18,7 +18,7 @@ public class MoveWhenHit : MonoBehaviour
     void Start()
     {
         originalPos = transform.localPosition;
-        originalRotation = transform.eulerAngles;
+        originalRotation = transform.localEulerAngles;
         hasMoved = false;
     }
 
@@ -40,6 +40,6 @@ public class MoveWhenHit : MonoBehaviour
     {
         hasMoved = false;
         transform.localPosition = originalPos;
-        transform.eulerAngles = originalRotation;
+        transform.localEulerAngles = originalRotation;
     }
 }
