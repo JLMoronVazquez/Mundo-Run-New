@@ -21,7 +21,7 @@ public class AnimatePlayer5 : MonoBehaviour
     {
         anim.SetBool("isJumping", playerLogic.isJumping);
         anim.SetBool("isRolling", playerLogic.isRollInCooldown);
-        anim.SetBool("isTripping", playerLogic.isTripping);
+        anim.SetBool("isTripping", playerLogic.isTripping && playerLogic.isRunnig);
 
         Vector3 velPlayer = rbOfPlayer.velocity;
         float velocityXZ = Mathf.Abs(velPlayer.x) + Mathf.Abs(velPlayer.z);
