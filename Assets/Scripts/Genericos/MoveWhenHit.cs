@@ -15,7 +15,7 @@ public class MoveWhenHit : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         originalPos = transform.localPosition;
         originalRotation = transform.localEulerAngles;
