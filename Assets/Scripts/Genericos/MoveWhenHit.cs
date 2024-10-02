@@ -38,6 +38,7 @@ public class MoveWhenHit : MonoBehaviour
 
     void OnEnable()
     {
+        hasMoved = false;
         transform.localPosition = originalPos;
         transform.eulerAngles = originalRotation;
     }
