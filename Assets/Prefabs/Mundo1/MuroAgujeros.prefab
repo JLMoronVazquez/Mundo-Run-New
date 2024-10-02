@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 103200163753062143}
   - component: {fileID: 54256643289879967}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuroAgujeros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +121,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Muro
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 739e5d64add560f47baf69ec35ea0223,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
