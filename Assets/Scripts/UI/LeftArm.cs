@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,6 +14,14 @@ public class LeftArm : Arm
     private Vector3 positionPreClick;
 
     private float timerClick = 0;
+
+    private Rigidbody rb;
+
+    public void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
 
     public void LateUpdate()
     {
@@ -37,9 +46,12 @@ public class LeftArm : Arm
     public void Click()
     {
         positionPreClick = transform.localPosition;
-        Vector3 posClick = transform.localPosition;
+        Vector3 posClick = transform.position;
         posClick.z += clickDeep;
-        transform.DOLocalMove(posClick, clickDuration).SetLoops(2, LoopType.Yoyo).SetUpdate(true);
+        //print("pos: " + transform.position + " target: " + posClick);
+        transform.DOMove(posClick, clickDuration).SetLoops(2, LoopType.Yoyo).SetUpdate(true);
+        //rb.MovePosition( Vector3.zero );
+        //transform.position = posClick;
     }
 
 

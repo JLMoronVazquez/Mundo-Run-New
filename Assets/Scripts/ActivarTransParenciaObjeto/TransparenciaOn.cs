@@ -15,7 +15,7 @@ public class TransparenciaOn : MonoBehaviour
 
     // Referencia al renderer de la caja
     private Renderer rendererCaja;
-   
+
 
     // Inicializar la referencia al renderer de la caja
     void Start()
@@ -27,7 +27,7 @@ public class TransparenciaOn : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Verificar si el objeto que entra es el personaje
-        if (other.gameObject == muroActivaTransparencia)
+        if (other.gameObject.CompareTag("ActivaTransparencia"))
         {
             // Cambiar al Material 2
             rendererCaja.material = material2;
@@ -38,7 +38,7 @@ public class TransparenciaOn : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Verificar si el objeto que sale es el muro invisible 2
-        if (other.gameObject == muroDesactivarTransparencia && transparenciaActivada == true)
+        if (other.gameObject.CompareTag("DesactivaTransparencia") && transparenciaActivada == true)
         {
             transparenciaActivada = false;
             rendererCaja.material = material1;
