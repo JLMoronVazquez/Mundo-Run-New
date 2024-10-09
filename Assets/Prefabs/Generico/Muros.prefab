@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5639426076971197473}
   - component: {fileID: 7603737741911242589}
   m_Layer: 9
-  m_Name: Desactiva
+  m_Name: DesactivaTransparencia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 4683009141935768909}
   - component: {fileID: 4174332581246579434}
   m_Layer: 9
-  m_Name: activa
+  m_Name: activaTransparencia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
