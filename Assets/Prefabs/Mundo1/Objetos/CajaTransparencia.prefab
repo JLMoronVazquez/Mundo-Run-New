@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material1: {fileID: 2100000, guid: 5fdef4a1d87d04d4db6e9dbc679b789b, type: 2}
-  material2: {fileID: 2100000, guid: 0ad8155ff34b9ed4b8ac8e844702bb37, type: 2}
+  material2: {fileID: 2100000, guid: 69522df0460e43a498390ac426c0c1ce, type: 2}
   muroActivaTransparencia: {fileID: 0}
   muroDesactivarTransparencia: {fileID: 0}
 --- !u!65 &1919416978594561410
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material1: {fileID: 2100000, guid: 5fdef4a1d87d04d4db6e9dbc679b789b, type: 2}
-  material2: {fileID: 2100000, guid: 0ad8155ff34b9ed4b8ac8e844702bb37, type: 2}
+  material2: {fileID: 2100000, guid: 69522df0460e43a498390ac426c0c1ce, type: 2}
   muroActivaTransparencia: {fileID: 0}
   muroDesactivarTransparencia: {fileID: 0}
 --- !u!65 &2083065516969993066
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material1: {fileID: 2100000, guid: 5fdef4a1d87d04d4db6e9dbc679b789b, type: 2}
-  material2: {fileID: 2100000, guid: 0ad8155ff34b9ed4b8ac8e844702bb37, type: 2}
+  material2: {fileID: 2100000, guid: 69522df0460e43a498390ac426c0c1ce, type: 2}
   muroActivaTransparencia: {fileID: 0}
   muroDesactivarTransparencia: {fileID: 0}
 --- !u!65 &5225071058695427064

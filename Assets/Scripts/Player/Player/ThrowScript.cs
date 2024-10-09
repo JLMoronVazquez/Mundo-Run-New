@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ThrowScript : MonoBehaviour
 {
+    public Cruzeta cruz;
     public GameObject packagePrefab;
     public Rigidbody playerRb;
     public float lifeSpan;
@@ -20,6 +21,8 @@ public class ThrowScript : MonoBehaviour
 
     public void Start()
     {
+        cruz.readyTime = lifeTimer + delayTime;
+        cruz.IgnoreMe = IgnoreMe;
         isThrowing = false;
         package = Instantiate(packagePrefab);
         package.SetActive(false);

@@ -9,15 +9,8 @@ public class FollowPlayer : MonoBehaviour
     public float stiffness;
     public float offsetZ;
 
-    private Rigidbody rb;
-
-    public void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-
     public void Update()
     {
-        rb.DOMoveZ(playerTr.position.z - offsetZ, stiffness);
+        transform.DOMoveZ(playerTr.position.z - offsetZ, stiffness);
     }
 }
