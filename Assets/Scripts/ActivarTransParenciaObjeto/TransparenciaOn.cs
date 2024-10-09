@@ -33,12 +33,8 @@ public class TransparenciaOn : MonoBehaviour
             rendererCaja.material = material2;
             transparenciaActivada = true;
         }
-        // Verificar si colisiona con el muro invisible 2
-        if (other.gameObject == muro2)
-        {
-            
-        }
     }
+
     private void OnTriggerExit(Collider other)
     {
         // Verificar si el objeto que sale es el muro invisible 2
@@ -46,7 +42,6 @@ public class TransparenciaOn : MonoBehaviour
         {
             transparenciaActivada = false;
             rendererCaja.material = material1;
-
         }
     }
 }
