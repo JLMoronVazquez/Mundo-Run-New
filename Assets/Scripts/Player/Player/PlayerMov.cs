@@ -57,7 +57,7 @@ namespace Player
             inputMov.y = Input.GetAxisRaw("Vertical");
 
             isRunnig = false;
-            if( inputMov.magnitude > 0.1f )
+            if (inputMov.magnitude > 0.1f)
             {
                 isRunnig = true;
             }
@@ -74,16 +74,20 @@ namespace Player
             }
 
             inputMov = inputMov.normalized * speeds.speed;
-            
+
             if (!CheckAhead(inputMov))
             {
                 Vector3 nextVelocity = new Vector3(inputMov.x, rb.velocity.y, inputMov.y);
-                if( rbOfGround != null )
+                if (rbOfGround != null)
                 {
                     nextVelocity.x += rbOfGround.velocity.x;
                     nextVelocity.z += rbOfGround.velocity.z;
                 }
                 rb.velocity = nextVelocity;
+            }
+            else
+            {
+                isRunnig = false;
             }
 
         }
