@@ -21,7 +21,7 @@ public class ThrowScript : MonoBehaviour
 
     public void Start()
     {
-        cruz.readyTime = lifeSpan + delayTime;
+        cruz.readyTime = lifeSpan;
         cruz.IgnoreMe = IgnoreMe;
         isThrowing = false;
         package = Instantiate(packagePrefab);
