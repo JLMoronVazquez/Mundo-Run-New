@@ -21,7 +21,7 @@ public class ThrowScript : MonoBehaviour
 
     public void Start()
     {
-        cruz.readyTime = lifeTimer + delayTime;
+        cruz.readyTime = lifeSpan + delayTime;
         cruz.IgnoreMe = IgnoreMe;
         isThrowing = false;
         package = Instantiate(packagePrefab);
@@ -78,6 +78,9 @@ public class ThrowScript : MonoBehaviour
             packageRb.AddForce(direction * throwForce, ForceMode.Impulse);
             //packageRb.velocity = packageRb.velocity + playerRb.velocity;
         }
+
+        cruz.CantThrow();
+        
     }
 
     public void CountTimer()
